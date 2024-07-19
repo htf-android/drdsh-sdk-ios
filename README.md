@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/DrdshChatSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
 [![Platform](https://img.shields.io/cocoapods/p/DrdshChatSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
 
-
 ## Screenshots
+
 <p align="center">
 <a href="https://www.drdsh.live/sdk/Offline.png">
 <img src="https://www.drdsh.live/sdk/Offline.png" height="480">
@@ -21,7 +21,6 @@
 </a>
 </p>
 
-
 <p align="center">
 <a href="https://www.drdsh.live/sdk/attachment-message.png">
 <img src="https://www.drdsh.live/sdk/attachment-message.png" height="480">
@@ -35,9 +34,6 @@
 <img src="https://www.drdsh.live/sdk/offline.png" height="480">
 </a>
 </p>
-
-
-
 
 ## Features
 
@@ -55,8 +51,8 @@ It includes such features as:
 
 It includes such requirements as:
 
-* Swift Version : 5.0 
-* Xcode : 11 or more 
+* Swift Version : 5.0
+* Xcode : 11 or more
 
 ## Installation
 
@@ -70,7 +66,7 @@ $ gem install cocoapods
 
 To integrate DrdshChatSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :
 
-```target '<Your Target Name>' do
+```target
 pod 'DrdshChatSDK'
 end
 ```
@@ -81,22 +77,20 @@ Then, run the following command:
 $ pod install
 ```
 
-
 ## Usage
 
 #### Step 1
 
-* For access ``DrdshChatSDK`` you need to import Pod to your project 
+* For access ``DrdshChatSDK`` you need to import Pod to your project
 
 ```swift
 
     import DrdshChatSDK
-    
+  
     class ViewController: UIViewController {
 
     }
 ```
-
 
 #### Step 2
 
@@ -107,18 +101,20 @@ $ pod install
     let sdkCongig = DrdshChatSDKConfiguration()
     sdkCongig.appSid = "put your appSid here"
     //"APPSID you will get it from https://www.drdsh.live/company/api-key."
-    
+  
 ```
+
 #### Step 3
 
-* For Open SDK you need to call below function with ``DrdshChatSDKConfiguration()`` object 
+* For Open SDK you need to call below function with ``DrdshChatSDKConfiguration()`` object
 
 ```swift
      DrdshChatSDK.presentChat(config: sdkCongig)
 ```
+
 #### Step 4
 
-* Below is the fully code of open SDK with dummy appSid 
+* Below is the fully code of open SDK with dummy appSid
 
 ```swift
 
@@ -136,65 +132,47 @@ $ pod install
 ```swift
 
     let sdkCongig = DrdshChatSDKConfiguration()
-    
-    
+  
+  
     //if you need in Arabic langauge
     sdkCongig.local = "ar"
 
     //set the Background color
     sdkCongig.bgColor = "#ffffff"
-    
+  
     //set the Button Background color
     sdkCongig.buttonColor = "#6f2b91"
-    
+  
     //set the Navigation Bar color
     sdkCongig.topBarBgColor = "#6f2b91"
-    
+  
     //set the My Chat Bubble color
     sdkCongig.myChatBubbleColor = "#EEEEEE"
-    
+  
     //set the My Chat text color
     sdkCongig.myChatTextColor = "#47336b"
-    
+  
     //set the Opposite Chat Bubble color
     sdkCongig.oppositeChatBubbleColor = "#6f2b91"
-    
+  
     //set the Opposite Chat Text color
     sdkCongig.oppositeChatTextColor = "#FFFFFF"
 
-    
+  
 ```
 
 #### Done
+
 Thats it, you successfully integrate DrdshChatSDK
-
-
 
 ## Author
 
 HTF, cto@htf.sa
 
-
 ### Issues
 
 If you find an issue, please [create an issue](https://github.com/cto-htfsa/drdsh-sdk-ios/issue).
 
-
-
 ## License
 
 Apache License, Version 2.0. See [LICENSE](LICENSE) file.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
