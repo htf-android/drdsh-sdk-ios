@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DrdshSDK'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'To Build Excellent Customer Experience, Connect With DRDSH.'
 
 # This description is used to generate tags and improve search results.
@@ -40,8 +40,8 @@ We have influential engagement products and potent customer service with flexibi
      'DrdshSDK' => ['DrdshSDK/Assets/**/*']
    }
    s.requires_arc = true
-   s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
-#   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
+   s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0','OTHER_LDFLAGS' => '-ObjC'  }
+   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64','IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
 #      s.subspec "Crash" do |crash|
 #         crash.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
