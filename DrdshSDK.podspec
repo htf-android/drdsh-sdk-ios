@@ -27,11 +27,11 @@ We have influential engagement products and potent customer service with flexibi
   s.author           = { 'htf' => 'cto@htf.sa' }
   s.source           = { :git => 'https://github.com/htf-app/drdsh-sdk-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = "13.0"
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'DrdshSDK/Classes/**/*'
-  s.swift_version = "5.0"
-  s.platform     = :ios, "13.0"
+  s.swift_version = '5.0'
+  s.platform     = :ios, '13.0'
   s.dependency 'SwiftyJSON', '~> 4.0'
   s.dependency 'MBProgressHUD'
   s.dependency 'IQKeyboardManagerSwift', '6.2.1'
