@@ -1,6 +1,6 @@
 PODS:
-  - DrdshSDK (1.0.0):
-    - IQKeyboardManagerSwift
+  - DrdshSDK (1.0.1):
+    - IQKeyboardManagerSwift (= 6.2.1)
     - MBProgressHUD
     - Socket.IO-Client-Swift (= 15.2.0)
     - SwiftyJSON (~> 4.0)
@@ -87,10 +87,6 @@ DEPENDENCIES:
   - DrdshSDK (from `../`)
   - Firebase/Messaging
   - FirebaseCrashlytics
-  - IQKeyboardManagerSwift (= 6.2.1)
-  - MBProgressHUD
-  - Socket.IO-Client-Swift
-  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
@@ -118,7 +114,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DrdshSDK: d58bf43e3ad14dbee9330b5f0ab55b0c8c2e615e
+  DrdshSDK: 8924bcef559f4c39f8430633dcaf5f57e5fa0727
   Firebase: 25899099b77d255a636e3579c3d9dce10ec150d5
   FirebaseCore: 65a801af84cca84361ef9eac3fd868656968a53b
   FirebaseCoreExtension: 2dbc745b337eb99d2026a7a309ae037bd873f45e
@@ -138,6 +134,6 @@ SPEC CHECKSUMS:
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 7b34ca54b5072410bd2738bf67ec1893b2e4fb3b
+PODFILE CHECKSUM: 3a25aa4e36041974d4bfb90829025a2f2ecfbcf5
 
 COCOAPODS: 1.14.3

@@ -1,0 +1,6 @@
+framework module DrdshSDK {
+  umbrella header "DrdshSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

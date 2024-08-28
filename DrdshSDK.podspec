@@ -34,7 +34,7 @@ We have influential engagement products and potent customer service with flexibi
   s.platform     = :ios, "13.0"
   s.dependency 'SwiftyJSON', '~> 4.0'
   s.dependency 'MBProgressHUD'
-  s.dependency 'IQKeyboardManagerSwift'
+  s.dependency 'IQKeyboardManagerSwift', '6.2.1'
   s.dependency 'Socket.IO-Client-Swift','15.2.0'
    s.resource_bundles = {
      'DrdshSDK' => ['DrdshSDK/Assets/**/*']

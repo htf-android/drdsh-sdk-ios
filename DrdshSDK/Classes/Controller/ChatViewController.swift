@@ -54,7 +54,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if DrdshSDK.shared.AllDetails.visitorConnectedStatus == 1{
             self.title = DrdshSDK.shared.config.waitingForAgent.Local()
             timer = Timer(timeInterval: TimeInterval(DrdshSDK.shared.AllDetails.embeddedChat.maxWaitTime), target: self, selector: #selector(invitationMaxWaitTimeExceeded), userInfo: nil, repeats: false)
-            RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
+            RunLoop.main.add(timer, forMode: .commonModes)
         }
         
         CommonSocket.shared.CommanEmitSokect(command: .joinVisitorsRoom,data: [[
