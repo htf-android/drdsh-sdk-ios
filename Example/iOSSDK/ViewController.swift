@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DrdshChatSDK
+import DrdshSDK
 import Firebase
 
 class ViewController: UIViewController {

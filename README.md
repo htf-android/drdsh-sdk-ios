@@ -1,8 +1,8 @@
 # DrdshSDK
 
-[![CI Status](https://img.shields.io/travis/gauravgudaliya/DrdshChatSDK.svg?style=flat)](https://travis-ci.org/gauravgudaliya/DrdshChatSDK)
+[![CI Status](https://img.shields.io/travis/gauravgudaliya/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshSDK)
 [![Version](https://img.shields.io/cocoapods/v/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshSDK)
-[![License](https://img.shields.io/cocoapods/l/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
+[![License](https://img.shields.io/cocoapods/l/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshSDK)
 [![Platform](https://img.shields.io/cocoapods/p/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshSDK)
 
 ## Screenshots
