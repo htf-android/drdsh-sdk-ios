@@ -32,7 +32,7 @@
 		7FE7E0EE25401A2600093186 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7FE7E0F125401A4F00093186 /* AppDelegate+Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extenstion.swift"; sourceTree = "<group>"; };
 		874BD15D3F08D78196C2E459 /* Pods_iOSSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A71C78C5297951CEDC415BD7 /* DrdshChatSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DrdshChatSDK.podspec; path = ../DrdshChatSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A71C78C5297951CEDC415BD7 /* DrdshSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DrdshSDK.podspec; path = ../DrdshSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CAD1DD32F67CEA460D4EA3AC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				A71C78C5297951CEDC415BD7 /* DrdshChatSDK.podspec */,
+				A71C78C5297951CEDC415BD7 /* DrdshSDK.podspec */,
 				6B7241A93C4902A4659CE1E9 /* README.md */,
 				CAD1DD32F67CEA460D4EA3AC /* LICENSE */,
 			);

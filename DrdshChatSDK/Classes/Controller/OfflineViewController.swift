@@ -1,6 +1,6 @@
 //
 //  OfflineViewController.swift
-//  DrdshChatSDK
+//  DrdshSDK
 //
 //  Created by Gaurav Gudaliya R on 20/03/20.
 //
@@ -24,22 +24,22 @@ class OfflineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = DrdshChatSDK.shared.localizedString(stringKey:"offline")
-        self.view.backgroundColor = DrdshChatSDK.shared.config.bgColor.Color()
+        self.title = DrdshSDK.shared.localizedString(stringKey:"offline")
+        self.view.backgroundColor = DrdshSDK.shared.config.bgColor.Color()
         self.txtFullName.text = GGUserSessionDetail.shared.name
         self.txtMobile.text = GGUserSessionDetail.shared.mobile
         self.txtEmailAddress.text = GGUserSessionDetail.shared.email
     
-        if DrdshChatSDK.shared.config.local == "ar"{
+        if DrdshSDK.shared.config.local == "ar"{
             self.txtFullName.textAlignment = .right
             self.txtMobile.textAlignment = .right
             self.txtEmailAddress.textAlignment = .right
             self.txtSubject.textAlignment = .right
             self.txtTypeYourQuestion.textAlignment = .right
         }
-        self.btnStart.setTitle(DrdshChatSDK.shared.localizedString(stringKey:"sendMessage"), for: .normal)
-        var backImage = DrdshChatSDK.shared.config.backImage
-        if DrdshChatSDK.shared.config.local == "ar"{
+        self.btnStart.setTitle(DrdshSDK.shared.localizedString(stringKey:"sendMessage"), for: .normal)
+        var backImage = DrdshSDK.shared.config.backImage
+        if DrdshSDK.shared.config.local == "ar"{
             backImage = backImage.rotate(radians: .pi)
         }
         let barItem = UIBarButtonItem(image:  backImage, style: .plain, target: self, action: #selector(dissmissView))
@@ -53,14 +53,14 @@ class OfflineViewController: UIViewController {
     func setupData(){
         DispatchQueue.main.async {
             self.viewEmailAddress.isHidden = false
-            self.viewMobile.isHidden = !DrdshChatSDK.shared.AllDetails.embeddedChat.offlineMsgShowMobileBox
-            self.viewSubject.isHidden = !DrdshChatSDK.shared.AllDetails.embeddedChat.offlineMsgShowSubjectBox
-            self.btnStart.backgroundColor = DrdshChatSDK.shared.config.topBarBgColor.Color()
-            self.txtFullName.placeholder = DrdshChatSDK.shared.config.fieldPlaceholderName.Local()
-            self.txtMobile.placeholder = DrdshChatSDK.shared.config.fieldPlaceholderMobile.Local()
-            self.txtEmailAddress.placeholder = DrdshChatSDK.shared.config.fieldPlaceholderEmail.Local()
-            self.txtTypeYourQuestion.placeholder = DrdshChatSDK.shared.config.fieldPlaceholderMessage.Local()
-            self.btnStart.backgroundColor = DrdshChatSDK.shared.config.buttonColor.Color()
+            self.viewMobile.isHidden = !DrdshSDK.shared.AllDetails.embeddedChat.offlineMsgShowMobileBox
+            self.viewSubject.isHidden = !DrdshSDK.shared.AllDetails.embeddedChat.offlineMsgShowSubjectBox
+            self.btnStart.backgroundColor = DrdshSDK.shared.config.topBarBgColor.Color()
+            self.txtFullName.placeholder = DrdshSDK.shared.config.fieldPlaceholderName.Local()
+            self.txtMobile.placeholder = DrdshSDK.shared.config.fieldPlaceholderMobile.Local()
+            self.txtEmailAddress.placeholder = DrdshSDK.shared.config.fieldPlaceholderEmail.Local()
+            self.txtTypeYourQuestion.placeholder = DrdshSDK.shared.config.fieldPlaceholderMessage.Local()
+            self.btnStart.backgroundColor = DrdshSDK.shared.config.buttonColor.Color()
         }
     }
     @objc func dissmissView(){
@@ -74,29 +74,29 @@ class OfflineViewController: UIViewController {
     }
     func SendOfflineMsg() {
         if self.txtFullName.text == ""{
-            self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterName)
+            self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterName)
             return
         }else if self.txtEmailAddress.text == ""{
-            self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterEmailAddress)
+            self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterEmailAddress)
             return
         }else if !self.txtEmailAddress.text!.isValidEmail{
-            self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterValidEmail)
+            self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterValidEmail)
             return
-        }else if self.txtMobile.text == "" && DrdshChatSDK.shared.AllDetails.embeddedChat.offlineMsgShowMobileBox{
-            self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterMobile)
+        }else if self.txtMobile.text == "" && DrdshSDK.shared.AllDetails.embeddedChat.offlineMsgShowMobileBox{
+            self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterMobile)
             return
-        }else if self.txtSubject.text == "" && DrdshChatSDK.shared.AllDetails.embeddedChat.offlineMsgShowSubjectBox{
-            self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterSubject)
+        }else if self.txtSubject.text == "" && DrdshSDK.shared.AllDetails.embeddedChat.offlineMsgShowSubjectBox{
+            self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterSubject)
             return
         }else if self.txtTypeYourQuestion.text == ""{
-            self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterMessage)
+            self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterMessage)
             return
         }
         
       let newTodo: [String: Any] = [
-            "appSid" : DrdshChatSDK.shared.config.appSid,
-            "locale" : DrdshChatSDK.shared.config.local,
-            "_id":DrdshChatSDK.shared.AllDetails.visitorID,
+            "appSid" : DrdshSDK.shared.config.appSid,
+            "locale" : DrdshSDK.shared.config.local,
+            "_id":DrdshSDK.shared.AllDetails.visitorID,
             "subject" : self.txtSubject.text!,
             "name": self.txtFullName.text!,
             "mobile": self.txtMobile.text!,
@@ -110,7 +110,7 @@ class OfflineViewController: UIViewController {
     }
     func showAlertView(str:String){
          let alert = UIAlertController(title: nil, message: str.Local(), preferredStyle: UIAlertController.Style.alert)
-         alert.addAction(UIAlertAction(title: DrdshChatSDK.shared.config.ok.Local(), style: UIAlertAction.Style.default, handler: nil))
-         DrdshChatSDK.shared.topViewController()?.present(alert, animated: true, completion: nil)
+         alert.addAction(UIAlertAction(title: DrdshSDK.shared.config.ok.Local(), style: UIAlertAction.Style.default, handler: nil))
+         DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: nil)
     }
 }

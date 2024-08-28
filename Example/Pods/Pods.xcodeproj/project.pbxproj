@@ -99,7 +99,7 @@
 		1DF2669183638E383AC4C4CAEDB6B78D /* LocalOverrideSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6405FC89B39C819BCF4CA15B643AE9 /* LocalOverrideSettings.swift */; };
 		1E2669B19C7BAEFCDBB1F2C8AE7F8ACA /* Promise+Always.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A6B255E034B6279B7E763E47CD095 /* Promise+Always.swift */; };
 		1E429F30D5DECB59BD73B038CFCB0AB1 /* FIRCLSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382F812CD10BEE9865E9AC765248596 /* FIRCLSFileManager.m */; };
-		1EB4E7295917ECEA04A8B407974CDE8A /* DrdshChatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC016D9E85A5C01AB8EC5C26637311 /* DrdshChatSDK.swift */; };
+		1EB4E7295917ECEA04A8B407974CDE8A /* DrdshSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC016D9E85A5C01AB8EC5C26637311 /* DrdshSDK.swift */; };
 		1EF79FFA8B84F9129B937437A01BAF01 /* FIRCLSSymbolicationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F56259269D2F7612D83A408486A995B8 /* FIRCLSSymbolicationOperation.m */; };
 		1F1B6FFB0432C0C22E96F5E46B6D1789 /* FIRCrashlyticsReport_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D04DEF4DC8624CE88413C991FD835751 /* FIRCrashlyticsReport_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1F4B542437928E436781C5374CE235D5 /* GULNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3BF660A260278F48F5ABDF0031898 /* GULNetworkInfo.m */; };
@@ -164,7 +164,7 @@
 		2FBF3F313A874B1690CC371C7332D23D /* FIRLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 296F8A941B36B7E71E91F71FD805634E /* FIRLibrary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		310531193141C01F90342BE4BFFF14FA /* FIRCLSOnDemandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EB3C85DEB21FBB46ACB1BE74A2E2E5 /* FIRCLSOnDemandModel.m */; };
 		3148167DDF1CCFE187935C1CCC1C0CD1 /* GULKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 841113F790C4CA5A4C2519660656E9A9 /* GULKeychainUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3150FCB6BF370AE68FAD5147C0A1287B /* DrdshChatSDK-DrdshChatSDK in Resources */ = {isa = PBXBuildFile; fileRef = E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK-DrdshChatSDK */; };
+		3150FCB6BF370AE68FAD5147C0A1287B /* DrdshChatSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK.bundle */; };
 		318A79CE6B3F3001A9E909FAE6DA637F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABB99DE968BB04ECF4A9C4CE4644E8B /* SystemConfiguration.framework */; };
 		31E71AE963F44A80C5477C5D6FF9F185 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245868D0442E76D693FE0EA26A488F67 /* SwiftyJSON.swift */; };
 		323F18FC7C353AE21C54D56F91F1A5FD /* GDTCCTNanopbHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 388268813816B355EFF00B479AEB533C /* GDTCCTNanopbHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -1430,7 +1430,7 @@
 		46EB0AC0AF4D001D13E67854949104DD /* dwarf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dwarf.h; path = Crashlytics/third_party/libunwind/dwarf.h; sourceTree = "<group>"; };
 		47CBE0318F5CC9EF0C7F4B8689DC1FF4 /* FIRCLSMachOBinary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSMachOBinary.h; path = Crashlytics/Shared/FIRCLSMachO/FIRCLSMachOBinary.h; sourceTree = "<group>"; };
 		47E59CC0C3C2836813243E80B27AF95B /* FIRMessagingAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingAnalytics.h; path = FirebaseMessaging/Sources/FIRMessagingAnalytics.h; sourceTree = "<group>"; };
-		4802479E618726CF78E854138B910E3B /* DrdshChatSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DrdshChatSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4802479E618726CF78E854138B910E3B /* DrdshSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DrdshSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		48A281D6B383E9178D9243C75B3F9EC2 /* FIRComponentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentType.h; path = FirebaseCore/Extension/FIRComponentType.h; sourceTree = "<group>"; };
 		48A9EAF3BEA20AE0173BFB5E10681FFD /* FirebaseCoreInternal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCoreInternal.debug.xcconfig; sourceTree = "<group>"; };
 		4936944024D7FFE13DFC6015DE7980FA /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
@@ -1512,7 +1512,7 @@
 		5C6F4B36E532D89FC312C850AA15BFF8 /* FIRCLSOnDemandModel_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSOnDemandModel_Private.h; path = Crashlytics/Crashlytics/Private/FIRCLSOnDemandModel_Private.h; sourceTree = "<group>"; };
 		5CDB643DE6C0B16E1E367C9DF3075BFC /* FIRCLSHost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSHost.m; path = Crashlytics/Crashlytics/Components/FIRCLSHost.m; sourceTree = "<group>"; };
 		5D7654712E989624D877081ED04D195A /* Pods-iOSSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOSSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5DEC016D9E85A5C01AB8EC5C26637311 /* DrdshChatSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrdshChatSDK.swift; sourceTree = "<group>"; };
+		5DEC016D9E85A5C01AB8EC5C26637311 /* DrdshSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrdshSDK.swift; sourceTree = "<group>"; };
 		5E622D529EC9849238415F1BA711DDDD /* nanopb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "nanopb-Info.plist"; sourceTree = "<group>"; };
 		5E9DF99D6AEB46483C8550FD947B17F9 /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
 		5F084B6E85AE3DD9AE6384CA0AB7175F /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
@@ -1963,7 +1963,7 @@
 		E82051FE9395479BF886181F509D917F /* FIRCLSSerializeSymbolicatedFramesOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSSerializeSymbolicatedFramesOperation.m; path = Crashlytics/Crashlytics/Operations/Symbolication/FIRCLSSerializeSymbolicatedFramesOperation.m; sourceTree = "<group>"; };
 		E82689AACB806F66FB3683BC536971A8 /* FIRCLSDwarfExpressionMachine.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = FIRCLSDwarfExpressionMachine.c; path = Crashlytics/Crashlytics/Unwind/Dwarf/FIRCLSDwarfExpressionMachine.c; sourceTree = "<group>"; };
 		E8603F149608888B69450ECED5FF2A66 /* FIRCLSSettingsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSSettingsManager.m; path = Crashlytics/Crashlytics/Settings/FIRCLSSettingsManager.m; sourceTree = "<group>"; };
-		E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK-DrdshChatSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "DrdshChatSDK-DrdshChatSDK"; path = DrdshChatSDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrdshChatSDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF7F6951A6FEB221F92E3984446D07 /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = FirebaseCore/Extension/FIRComponent.h; sourceTree = "<group>"; };
 		E92A7C3761047612D38809F07377F679 /* GDTCORStorageEventSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORStorageEventSelector.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORStorageEventSelector.m; sourceTree = "<group>"; };
 		E9D35626E99B1578DCF17F7B9D84DC8B /* GDTCORClock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORClock.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORClock.h; sourceTree = "<group>"; };
@@ -2002,7 +2002,7 @@
 		F2B95309F1841015F57E172A6C985634 /* FIRComponentContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainer.h; path = FirebaseCore/Extension/FIRComponentContainer.h; sourceTree = "<group>"; };
 		F3A5A1A567777E741099FA63E8FB0279 /* sent.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = sent.png; path = DrdshChatSDK/Assets/sent.png; sourceTree = "<group>"; };
 		F41CA75A250EF9BD6ECFD518A9FC57C8 /* FIRCLSFABAsyncOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSFABAsyncOperation.h; path = Crashlytics/Shared/FIRCLSOperation/FIRCLSFABAsyncOperation.h; sourceTree = "<group>"; };
-		F49DFB896E4D5E2583B422B2ED7738AA /* DrdshChatSDK.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DrdshChatSDK.storyboard; path = Base.lproj/DrdshChatSDK.storyboard; sourceTree = "<group>"; };
+		F49DFB896E4D5E2583B422B2ED7738AA /* DrdshChatSDK.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DrdshChatSDK.storyboard; path = Base.lproj/DrdshSDK.storyboard; sourceTree = "<group>"; };
 		F4A31A00741D6192A89AFF1BBD78E32C /* FirebaseCrashlytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCrashlytics.modulemap; sourceTree = "<group>"; };
 		F56259269D2F7612D83A408486A995B8 /* FIRCLSSymbolicationOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSSymbolicationOperation.m; path = Crashlytics/Crashlytics/Operations/Symbolication/FIRCLSSymbolicationOperation.m; sourceTree = "<group>"; };
 		F65777CA3633A31993A8ABE54A349B2E /* Pods-iOSSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-iOSSDK_Example"; path = Pods_iOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2735,7 +2735,7 @@
 			name = encode;
 			sourceTree = "<group>";
 		};
-		64845EF8393D17B9363A42D28E1C9EB5 /* DrdshChatSDK */ = {
+		64845EF8393D17B9363A42D28E1C9EB5 /* DrdshSDK */ = {
 			isa = PBXGroup;
 			children = (
 				E241EE8FEA832D9326D05DADF2BC285B /* attchment.png */,
@@ -2743,7 +2743,7 @@
 				15F7F1E6385005037E213A31F6430BE3 /* back@3x.png */,
 				FAA810A4AD962477237F577EFB4847E6 /* delivered.png */,
 				A36B199703BEBE21C62479EF810A84BC /* dislike.png */,
-				F4035E4245119A749E1902564DD2CE67 /* DrdshChatSDK.storyboard */,
+				F4035E4245119A749E1902564DD2CE67 /* DrdshSDK.storyboard */,
 				4D900401C32F8680A2CB622A1A2E6E00 /* like.png */,
 				2A9AA70AF03A0DC29E25F31ABB38C010 /* Localizable.strings */,
 				2DEA8B06A6A887C1DEBE9B9BB68A030A /* mail.png */,
@@ -2758,7 +2758,7 @@
 				C99D2161C2710660BD2D7B224658C69C /* Pod */,
 				936FB64B3DDFABD1DBBB0CC15952B75C /* Support Files */,
 			);
-			name = DrdshChatSDK;
+			name = DrdshSDK;
 			path = ../..;
 			sourceTree = "<group>";
 		};
@@ -2776,7 +2776,7 @@
 			children = (
 				418B7D8519A250B2F927E0B213E6744D /* AGImagePickerController.swift */,
 				7F44F237F576B0AC5A6340170E118F0E /* CommonSocket.swift */,
-				5DEC016D9E85A5C01AB8EC5C26637311 /* DrdshChatSDK.swift */,
+				5DEC016D9E85A5C01AB8EC5C26637311 /* DrdshSDK.swift */,
 				7DF858C34E371364C662163578DB36F0 /* GGButton.swift */,
 				973C8D7F51C7F5E2931C7A1A33D43A11 /* GGObject.swift */,
 				2F7627FEE9171FCBEF463A0A1ADC8863 /* GGObject+Helper.swift */,
@@ -3068,7 +3068,7 @@
 			isa = PBXGroup;
 			children = (
 				521A231042DAB70AB12287663DAEB7D4 /* DrdshChatSDK.framework */,
-				E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK-DrdshChatSDK */,
+				E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK.bundle */,
 				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */,
 				AEF1DC80F0EB62580B81D18786BAF924 /* FirebaseCoreExtension */,
 				148D0F9E8C7373FEAF40D800FC5F1BAA /* FirebaseCoreInternal */,
@@ -3141,7 +3141,7 @@
 		C5BBBA357631AA6F23C70438365D9FF4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				64845EF8393D17B9363A42D28E1C9EB5 /* DrdshChatSDK */,
+				64845EF8393D17B9363A42D28E1C9EB5 /* DrdshSDK */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -3176,7 +3176,7 @@
 		C99D2161C2710660BD2D7B224658C69C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4802479E618726CF78E854138B910E3B /* DrdshChatSDK.podspec */,
+				4802479E618726CF78E854138B910E3B /* DrdshSDK.podspec */,
 				922BB28D88EA9BAA3E9696E0B8318EC0 /* LICENSE */,
 				DD737E12700F8FA455CDDF9F4B096DDF /* README.md */,
 			);
@@ -4422,9 +4422,9 @@
 			productReference = 06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */;
 			productType = "com.apple.product-type.framework";
 		};
-		F181421DEAF40F9C06E34BF1BFE300EC /* DrdshChatSDK */ = {
+		F181421DEAF40F9C06E34BF1BFE300EC /* DrdshSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 402239A8CADC3F3E5C30683E831AE2B1 /* Build configuration list for PBXNativeTarget "DrdshChatSDK" */;
+			buildConfigurationList = 402239A8CADC3F3E5C30683E831AE2B1 /* Build configuration list for PBXNativeTarget "DrdshSDK" */;
 			buildPhases = (
 				3D755A16367BEE50E026A8F84F1E5311 /* Headers */,
 				6D9FEC60979173D82B6E54A309E261AA /* Sources */,
@@ -4440,14 +4440,14 @@
 				6848AF0E8E8682D4BDF7D95D87F2EAED /* PBXTargetDependency */,
 				D486C4DA13E51F26DB00089C91CF718F /* PBXTargetDependency */,
 			);
-			name = DrdshChatSDK;
+			name = DrdshSDK;
 			productName = DrdshChatSDK;
 			productReference = 521A231042DAB70AB12287663DAEB7D4 /* DrdshChatSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FE14A350C6962B93BD867C817192CA64 /* DrdshChatSDK-DrdshChatSDK */ = {
+		FE14A350C6962B93BD867C817192CA64 /* DrdshSDK-DrdshSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 592784FFED45734D9B51A39516657F91 /* Build configuration list for PBXNativeTarget "DrdshChatSDK-DrdshChatSDK" */;
+			buildConfigurationList = 592784FFED45734D9B51A39516657F91 /* Build configuration list for PBXNativeTarget "DrdshSDK-DrdshSDK" */;
 			buildPhases = (
 				5ECD1A94B9F33C0171C09FE33A03E683 /* Sources */,
 				F4E7E2A6D1EB7583D5D0F63ECA99174D /* Frameworks */,
@@ -4457,9 +4457,9 @@
 			);
 			dependencies = (
 			);
-			name = "DrdshChatSDK-DrdshChatSDK";
+			name = "DrdshSDK-DrdshSDK";
 			productName = DrdshChatSDK;
-			productReference = E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK-DrdshChatSDK */;
+			productReference = E886F84F1B5A3EC2C28F503558472401 /* DrdshChatSDK.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		FE1DE31D91C32501251AE9687CDC2E0F /* FirebaseCoreExtension */ = {
@@ -4504,8 +4504,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F181421DEAF40F9C06E34BF1BFE300EC /* DrdshChatSDK */,
-				FE14A350C6962B93BD867C817192CA64 /* DrdshChatSDK-DrdshChatSDK */,
+				F181421DEAF40F9C06E34BF1BFE300EC /* DrdshSDK */,
+				FE14A350C6962B93BD867C817192CA64 /* DrdshSDK-DrdshSDK */,
 				072CEA044D2EF26F03496D5996BBF59F /* Firebase */,
 				4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */,
 				FE1DE31D91C32501251AE9687CDC2E0F /* FirebaseCoreExtension */,
@@ -4683,7 +4683,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3150FCB6BF370AE68FAD5147C0A1287B /* DrdshChatSDK-DrdshChatSDK in Resources */,
+				3150FCB6BF370AE68FAD5147C0A1287B /* DrdshChatSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4926,7 +4926,7 @@
 				65ECEC831F36638FDE2B1D10D05DBE73 /* ChatViewController.swift in Sources */,
 				A0C17EE6CF082C7C1528037D10DAE005 /* CommonSocket.swift in Sources */,
 				81EAC74EE1CC8903206EDF785B1F2166 /* DrdshChatSDK.storyboard in Sources */,
-				1EB4E7295917ECEA04A8B407974CDE8A /* DrdshChatSDK.swift in Sources */,
+				1EB4E7295917ECEA04A8B407974CDE8A /* DrdshSDK.swift in Sources */,
 				B05C9AF42AD6028DFD0AC0CC325841DD /* DrdshChatSDK-dummy.m in Sources */,
 				DF2554E46263407B3860C2604C76E39A /* GGButton.swift in Sources */,
 				74060A02B0642FC9F959C3BD4FC9EA77 /* GGObject.swift in Sources */,
@@ -5473,7 +5473,7 @@
 		D6D2960314C9987A407F86F4B36C8539 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DrdshChatSDK;
-			target = F181421DEAF40F9C06E34BF1BFE300EC /* DrdshChatSDK */;
+			target = F181421DEAF40F9C06E34BF1BFE300EC /* DrdshSDK */;
 			targetProxy = 2DDF7089E050A6C4F76E2FC0E7E92298 /* PBXContainerItemProxy */;
 		};
 		DC506C66181AD6E4A9FD5B400A919153 /* PBXTargetDependency */ = {
@@ -5533,7 +5533,7 @@
 		FF682F904098B9E9C8912086118DEA1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "DrdshChatSDK-DrdshChatSDK";
-			target = FE14A350C6962B93BD867C817192CA64 /* DrdshChatSDK-DrdshChatSDK */;
+			target = FE14A350C6962B93BD867C817192CA64 /* DrdshSDK-DrdshSDK */;
 			targetProxy = D01A0446B3303BC0F399C839B5809794 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -5549,12 +5549,12 @@
 			path = DrdshChatSDK/Assets;
 			sourceTree = "<group>";
 		};
-		F4035E4245119A749E1902564DD2CE67 /* DrdshChatSDK.storyboard */ = {
+		F4035E4245119A749E1902564DD2CE67 /* DrdshSDK.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F49DFB896E4D5E2583B422B2ED7738AA /* DrdshChatSDK.storyboard */,
 			);
-			name = DrdshChatSDK.storyboard;
+			name = DrdshSDK.storyboard;
 			path = DrdshChatSDK/Classes;
 			sourceTree = "<group>";
 		};
@@ -7002,7 +7002,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		402239A8CADC3F3E5C30683E831AE2B1 /* Build configuration list for PBXNativeTarget "DrdshChatSDK" */ = {
+		402239A8CADC3F3E5C30683E831AE2B1 /* Build configuration list for PBXNativeTarget "DrdshSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F432E4ADA36A4881AC362BC00D744AA9 /* Debug */,
@@ -7056,7 +7056,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		592784FFED45734D9B51A39516657F91 /* Build configuration list for PBXNativeTarget "DrdshChatSDK-DrdshChatSDK" */ = {
+		592784FFED45734D9B51A39516657F91 /* Build configuration list for PBXNativeTarget "DrdshSDK-DrdshSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85990BFEA0B8CAEC7CC5C813D4B0A0B9 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  iOSSDK
+//  DrdshSDK
 //
 //  Created by gauravgudaliya on 03/14/2020.
 //  Copyright (c) 2020 gauravgudaliya. All rights reserved.
@@ -35,47 +35,47 @@ class ViewController: UIViewController {
   
     @IBAction func btnStartENAction(_ sender:UIButton){
          UIView.appearance().semanticContentAttribute = .forceLeftToRight
-       let sdkCongig = DrdshChatSDKConfiguration()
+       let sdkCongig = DrdshSDKConfiguration()
        sdkCongig.appSid = self.appSid
         sdkCongig.FCM_Token = AppDelegate.shared.token
         sdkCongig.FCM_Auth_Key = AppDelegate.shared.Auth_key
-       DrdshChatSDK.presentChat(config: sdkCongig)
+       DrdshSDK.presentChat(config: sdkCongig)
     }
     @IBAction func btnStartARAction(_ sender:UIButton){
          UIView.appearance().semanticContentAttribute = .forceRightToLeft
-        let sdkCongig = DrdshChatSDKConfiguration()
+        let sdkCongig = DrdshSDKConfiguration()
         sdkCongig.appSid = self.appSid
         sdkCongig.FCM_Token = AppDelegate.shared.token
         sdkCongig.FCM_Auth_Key = AppDelegate.shared.Auth_key
        sdkCongig.local = "ar"
-       DrdshChatSDK.presentChat(config: sdkCongig)
+       DrdshSDK.presentChat(config: sdkCongig)
     }
     @IBAction func btnStartWithEVIRIDEAction(_ sender:UIButton){
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
-        let sdkCongig = DrdshChatSDKConfiguration()
+        let sdkCongig = DrdshSDKConfiguration()
         sdkCongig.appSid = self.appSid
         sdkCongig.FCM_Token = AppDelegate.shared.token
         sdkCongig.FCM_Auth_Key = AppDelegate.shared.Auth_key
         sdkCongig.topBarBgColor = "#383033"
-        DrdshChatSDK.presentChat(config: sdkCongig)
+        DrdshSDK.presentChat(config: sdkCongig)
     }
     @IBAction func btnStartWithLogistiomAction(_ sender:UIButton){
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
-        let sdkCongig = DrdshChatSDKConfiguration()
+        let sdkCongig = DrdshSDKConfiguration()
         sdkCongig.appSid = self.appSid
         sdkCongig.FCM_Token = AppDelegate.shared.token
         sdkCongig.FCM_Auth_Key = AppDelegate.shared.Auth_key
         sdkCongig.topBarBgColor = "#FA4D8F"
-        DrdshChatSDK.presentChat(config: sdkCongig)
+        DrdshSDK.presentChat(config: sdkCongig)
     }
     @IBAction func btnStartWithKilowatAction(_ sender:UIButton){
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
-        let sdkCongig = DrdshChatSDKConfiguration()
+        let sdkCongig = DrdshSDKConfiguration()
         sdkCongig.appSid = self.appSid
         sdkCongig.FCM_Token = AppDelegate.shared.token
         sdkCongig.FCM_Auth_Key = AppDelegate.shared.Auth_key
         sdkCongig.topBarBgColor = "#255D9F"
-        DrdshChatSDK.presentChat(config: sdkCongig)
+        DrdshSDK.presentChat(config: sdkCongig)
     }
     deinit {
         

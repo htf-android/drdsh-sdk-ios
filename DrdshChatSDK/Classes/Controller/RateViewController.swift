@@ -1,6 +1,6 @@
 //
 //  RateViewController.swift
-//  DrdshChatSDK
+//  DrdshSDK
 //
 //  Created by Gaurav Gudaliya R on 17/03/20.
 //
@@ -26,46 +26,46 @@ class RateViewController: UIViewController {
         self.btnDisLike.isHidden = type == 2
         self.btnLike.isHidden = type == 2
         self.btnMail.isHidden = type != 2
-        if DrdshChatSDK.shared.config.local == "ar"{
+        if DrdshSDK.shared.config.local == "ar"{
             self.txtComment.textAlignment = .right
         }
         if self.type == 2{
             txtComment.text = GGUserSessionDetail.shared.email
-            lblTitle.text = DrdshChatSDK.shared.config.pleaseInputYourEmailAddress.Local()
+            lblTitle.text = DrdshSDK.shared.config.pleaseInputYourEmailAddress.Local()
             txtComment.autocapitalizationType = .none
             txtComment.autocorrectionType = .no
         }else{
-            lblTitle.text = DrdshChatSDK.shared.localizedString(stringKey:DrdshChatSDK.shared.config.exitSurveyHeaderTxt)
+            lblTitle.text = DrdshSDK.shared.localizedString(stringKey:DrdshSDK.shared.config.exitSurveyHeaderTxt)
         }
-        txtComment.isHidden = !DrdshChatSDK.shared.AllDetails.embeddedChat.postChatPromptComments
+        txtComment.isHidden = !DrdshSDK.shared.AllDetails.embeddedChat.postChatPromptComments
 
-        self.btnSend.setTitle( DrdshChatSDK.shared.config.exitSurveySendButtonTxt.Local(), for: .normal)
-        self.btnCancel.setTitle( DrdshChatSDK.shared.config.exitSurveyCloseButtonTxt.Local(), for: .normal)
+        self.btnSend.setTitle( DrdshSDK.shared.config.exitSurveySendButtonTxt.Local(), for: .normal)
+        self.btnCancel.setTitle( DrdshSDK.shared.config.exitSurveyCloseButtonTxt.Local(), for: .normal)
         
-        lblDiscription.text = DrdshChatSDK.shared.localizedString(stringKey:DrdshChatSDK.shared.config.exitSurveyMessageTxt)
+        lblDiscription.text = DrdshSDK.shared.localizedString(stringKey:DrdshSDK.shared.config.exitSurveyMessageTxt)
         txtComment.layer.borderWidth = 1
         txtComment.layer.borderColor = UIColor.lightGray.cgColor
         txtComment.text = ""
-        self.btnCancel.backgroundColor = DrdshChatSDK.shared.config.buttonColor.Color()
-        self.btnSend.backgroundColor = DrdshChatSDK.shared.config.buttonColor.Color()
-        btnLike.setImage(DrdshChatSDK.shared.config.likeImage, for: .normal)
-        btnDisLike.setImage(DrdshChatSDK.shared.config.disLikeImage, for: .normal)
-        btnLike.setImage(DrdshChatSDK.shared.config.likeSelctedImage, for: .selected)
-        btnDisLike.setImage(DrdshChatSDK.shared.config.disLikeSelctedImage, for: .selected)
-        btnMail.setImage(DrdshChatSDK.shared.config.mailImage, for: .normal)
+        self.btnCancel.backgroundColor = DrdshSDK.shared.config.buttonColor.Color()
+        self.btnSend.backgroundColor = DrdshSDK.shared.config.buttonColor.Color()
+        btnLike.setImage(DrdshSDK.shared.config.likeImage, for: .normal)
+        btnDisLike.setImage(DrdshSDK.shared.config.disLikeImage, for: .normal)
+        btnLike.setImage(DrdshSDK.shared.config.likeSelctedImage, for: .selected)
+        btnDisLike.setImage(DrdshSDK.shared.config.disLikeSelctedImage, for: .selected)
+        btnMail.setImage(DrdshSDK.shared.config.mailImage, for: .normal)
         btnSend.action = {
             if self.type == 2{
                 if self.txtComment.text == ""{
-                    self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterEmailAddress)
+                    self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterEmailAddress)
                     return
                 }else if !self.txtComment.text.isValidEmail{
-                    self.showAlertView(str: DrdshChatSDK.shared.config.pleaseEnterValidEmail)
+                    self.showAlertView(str: DrdshSDK.shared.config.pleaseEnterValidEmail)
                     return
                 }else{
                     CommonSocket.shared.CommanEmitSokect(command: .emailChatTranscript,data: [[
-                        "appSid" : DrdshChatSDK.shared.config.appSid,
-                        "mid":DrdshChatSDK.shared.AllDetails.messageID,
-                        "vid":DrdshChatSDK.shared.AllDetails.visitorID,
+                        "appSid" : DrdshSDK.shared.config.appSid,
+                        "mid":DrdshSDK.shared.AllDetails.messageID,
+                        "vid":DrdshSDK.shared.AllDetails.visitorID,
                         "email":self.txtComment.text!]]) { (data) in
                         debugPrint(data)
                         self.dismiss(animated: false, completion: {
@@ -82,10 +82,10 @@ class RateViewController: UIViewController {
                     feedback = "bad"
                 }
                 CommonSocket.shared.CommanEmitSokect(command: .visitorEndChatSession, data: [[
-                    "appSid" : DrdshChatSDK.shared.config.appSid,
-                    "id":DrdshChatSDK.shared.AllDetails.messageID,
-                    "vid":DrdshChatSDK.shared.AllDetails.visitorID,
-                    "name":DrdshChatSDK.shared.AllDetails.name,
+                    "appSid" : DrdshSDK.shared.config.appSid,
+                    "id":DrdshSDK.shared.AllDetails.messageID,
+                    "vid":DrdshSDK.shared.AllDetails.visitorID,
+                    "name":DrdshSDK.shared.AllDetails.name,
                     "comment":self.txtComment.text!,
                     "feedback":feedback]]) { (data) in
                     debugPrint(data)
@@ -119,9 +119,9 @@ class RateViewController: UIViewController {
         }
     }
     func showAlertView(str:String){
-       let alert = UIAlertController(title: DrdshChatSDK.shared.config.error.Local(), message: str.Local(), preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: DrdshChatSDK.shared.config.ok.Local(), style: UIAlertAction.Style.default, handler: nil))
-        DrdshChatSDK.shared.topViewController()?.present(alert, animated: true, completion: nil)
+       let alert = UIAlertController(title: DrdshSDK.shared.config.error.Local(), message: str.Local(), preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: DrdshSDK.shared.config.ok.Local(), style: UIAlertAction.Style.default, handler: nil))
+        DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: nil)
     }
 }
 extension String {

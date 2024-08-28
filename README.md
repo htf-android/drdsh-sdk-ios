@@ -1,9 +1,9 @@
-# DrdshChatSDK
+# DrdshSDK
 
 [![CI Status](https://img.shields.io/travis/gauravgudaliya/DrdshChatSDK.svg?style=flat)](https://travis-ci.org/gauravgudaliya/DrdshChatSDK)
-[![Version](https://img.shields.io/cocoapods/v/DrdshChatSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
-[![License](https://img.shields.io/cocoapods/l/DrdshChatSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
-[![Platform](https://img.shields.io/cocoapods/p/DrdshChatSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
+[![Version](https://img.shields.io/cocoapods/v/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshSDK)
+[![License](https://img.shields.io/cocoapods/l/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshChatSDK)
+[![Platform](https://img.shields.io/cocoapods/p/DrdshSDK.svg?style=flat)](https://cocoapods.org/pods/DrdshSDK)
 
 ## Screenshots
 
@@ -64,10 +64,10 @@ It includes such requirements as:
 $ gem install cocoapods
 ```
 
-To integrate DrdshChatSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :
+To integrate DrdshSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :
 
 ```target
-pod 'DrdshChatSDK'
+pod 'DrdshSDK'
 end
 ```
 
@@ -81,11 +81,11 @@ $ pod install
 
 #### Step 1
 
-* For access ``DrdshChatSDK`` you need to import Pod to your project
+* For access ``DrdshSDK`` you need to import Pod to your project
 
 ```swift
 
-    import DrdshChatSDK
+    import DrdshSDK
   
     class ViewController: UIViewController {
 
@@ -94,11 +94,11 @@ $ pod install
 
 #### Step 2
 
-* For open the SDK chat support you have required appSid and you need to pass that to like below with ``DrdshChatSDKConfiguration()`` object
+* For open the SDK chat support you have required appSid and you need to pass that to like below with ``DrdshSDKConfiguration()`` object
 
 ```swift
 
-    let sdkCongig = DrdshChatSDKConfiguration()
+    let sdkCongig = DrdshSDKConfiguration()
     sdkCongig.appSid = "put your appSid here"
     //"APPSID you will get it from https://www.drdsh.live/company/api-key."
   
@@ -106,10 +106,10 @@ $ pod install
 
 #### Step 3
 
-* For Open SDK you need to call below function with ``DrdshChatSDKConfiguration()`` object
+* For Open SDK you need to call below function with ``DrdshSDKConfiguration()`` object
 
 ```swift
-     DrdshChatSDK.presentChat(config: sdkCongig)
+     DrdshSDK.presentChat(config: sdkCongig)
 ```
 
 #### Step 4
@@ -119,19 +119,19 @@ $ pod install
 ```swift
 
     @IBAction func btnStartChatAction(_ sender:UIButton){
-        let sdkCongig = DrdshChatSDKConfiguration()
+        let sdkCongig = DrdshSDKConfiguration()
         sdkCongig.appSid = "put your appSid here"
-        DrdshChatSDK.presentChat(config: sdkCongig)
+        DrdshSDK.presentChat(config: sdkCongig)
     }
 ```
 
 #### Customize :
 
-* This pod is easily fully customisable using ``DrdshChatSDKConfiguration()`` object  like below :
+* This pod is easily fully customisable using ``DrdshSDKConfiguration()`` object  like below :
 
 ```swift
 
-    let sdkCongig = DrdshChatSDKConfiguration()
+    let sdkCongig = DrdshSDKConfiguration()
   
   
     //if you need in Arabic langauge
@@ -163,7 +163,7 @@ $ pod install
 
 #### Done
 
-Thats it, you successfully integrate DrdshChatSDK
+Thats it, you successfully integrate DrdshSDK
 
 ## Author
 
@@ -171,7 +171,7 @@ HTF, cto@htf.sa
 
 ### Issues
 
-If you find an issue, please [create an issue](https://github.com/cto-htfsa/drdsh-sdk-ios/issue).
+If you find an issue, please [create an issue](https://github.com/htf-app/drdsh-sdk-ios/issue).
 
 ## License
 
