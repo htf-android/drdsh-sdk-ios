@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DrdshSDK'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'To Build Excellent Customer Experience, Connect With DRDSH.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ We have influential engagement products and potent customer service with flexibi
   s.ios.deployment_target = "13.0"
 
   s.source_files = 'DrdshSDK/Classes/**/*'
-  s.swift_version = "4.0"
+  s.swift_version = "5.0"
   s.platform     = :ios, "13.0"
   s.dependency 'SwiftyJSON', '~> 4.0'
   s.dependency 'MBProgressHUD'
