@@ -63,21 +63,21 @@ class CommonSocket: NSObject {
     
     func initSocket(completion: @escaping(Bool) -> Void) {
         manager.defaultSocket.on(clientEvent: .connect) { data, ack in
-            debugPrint("socket connected \(data)")
+            print("socket connected \(data)")
             completion(true)
         }
         manager.defaultSocket.on("client balance change") { dataArray, ack in
-            debugPrint("socket connected \(dataArray)")
+            print("socket connected \(dataArray)")
         }
         manager.defaultSocket.on(clientEvent: .disconnect) {data, ack in
-            debugPrint("socket disconnected \(data)")
+            print("socket disconnected \(data)")
             self.manager.defaultSocket.connect()
         }
         manager.defaultSocket.on(clientEvent: .reconnect) {data, ack in
             if ack.expected {
-                debugPrint("reconnect inside \(data) ack")
+                print("reconnect inside \(data) ack")
             }else{
-                debugPrint("reconnect inside without ack \(data) ")
+                print("reconnect inside without ack \(data) ")
             }
         }
         if manager.defaultSocket.status == .disconnected || manager.defaultSocket.status == .notConnected{
@@ -110,7 +110,7 @@ class CommonSocket: NSObject {
         if isConnected()
         {
             manager.defaultSocket.emitWithAck(command.relative, with: [t]).timingOut(after: 0) {resp in
-                debugPrint(command.relative,resp)
+                print(command.relative,resp)
                 if resp.count > 1{
                     if (resp[0] as? Int ?? 0) == 200{
                         completion(resp[1] as? [String:AnyObject] ?? [:])
@@ -122,7 +122,7 @@ class CommonSocket: NSObject {
         }else{
             initSocket(completion: { (result) in
                 self.manager.defaultSocket.emitWithAck(command.relative, with: [t]).timingOut(after: 0) {resp in
-                    debugPrint(command.relative,resp)
+                    print(command.relative,resp)
                     if resp.count > 1{
                         if (resp[0] as? Int ?? 0) == 200{
                             completion(resp[1] as? [String:AnyObject] ?? [:])
@@ -137,7 +137,7 @@ class CommonSocket: NSObject {
     func ipBlocked(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("ipBlocked") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -146,7 +146,7 @@ class CommonSocket: NSObject {
     func isReadListener(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("isReadListener") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -155,7 +155,7 @@ class CommonSocket: NSObject {
     func isDeliveredListener(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("isDeliveredListener") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -164,7 +164,7 @@ class CommonSocket: NSObject {
     func totalOnlineAgents(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("totalOnlineAgents") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -173,7 +173,7 @@ class CommonSocket: NSObject {
     func agentAcceptedChatRequest(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("agentAcceptedChatRequest") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -182,7 +182,7 @@ class CommonSocket: NSObject {
     func agentSendNewMessage(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("agentSendNewMessage") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -191,7 +191,7 @@ class CommonSocket: NSObject {
     func agentChatSessionTerminated(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("agentChatSessionTerminated") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -200,7 +200,7 @@ class CommonSocket: NSObject {
     func inviteVisitorListener(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("inviteVisitorListener") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -209,7 +209,7 @@ class CommonSocket: NSObject {
     func agentTypingListener(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("agentTypingListener") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -218,7 +218,7 @@ class CommonSocket: NSObject {
     func newAgentAcceptedChatRequest(completion: @escaping([String:AnyObject]) -> Void)
     {
         self.manager.defaultSocket.on("newAgentAcceptedChatRequest") { (resp, emitter) in
-            debugPrint(resp)
+            print(resp)
             if let t = resp[0] as? [String:AnyObject]{
                 completion(t)
             }
@@ -231,14 +231,14 @@ class CommonSocket: NSObject {
         {
             initSocket(completion: { (result) in
                 self.manager.defaultSocket.emitWithAck("visitorLoadChatHistory", with: data as? [[String:Any]] ?? []).timingOut(after: 0) {resp in
-                    debugPrint(resp)
+                    print(resp)
                     completion(resp)
                 }
             })
             return
         }
         manager.defaultSocket.emitWithAck("visitorLoadChatHistory", with: data as? [[String:Any]] ?? []).timingOut(after: 0) {resp in
-            debugPrint(resp)
+            print(resp)
             completion(resp)
         }
     }
