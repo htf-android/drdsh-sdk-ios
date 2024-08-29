@@ -33,8 +33,7 @@ static const size_t FIRCLSUInt64StringBufferLength = 21;
 static const size_t FIRCLSStringBufferLength = 16;
 const size_t FIRCLSWriteBufferLength = 1000;
 
-static bool FIRCLSFileInit(
-    FIRCLSFile* file, const char* path, int fdm, bool appendMode, bool bufferWrites);
+static bool FIRCLSFileInit(FIRCLSFile* file, int fdm, bool appendMode, bool bufferWrites);
 
 static void FIRCLSFileWriteToFileDescriptorOrBuffer(FIRCLSFile* file,
                                                     const char* string,
@@ -56,8 +55,7 @@ static void FIRCLSFileWriteCollectionEntryEpilog(FIRCLSFile* file);
 #define CLS_FILE_DEBUG_LOGGING 0
 
 #pragma mark - File Structure
-static bool FIRCLSFileInit(
-    FIRCLSFile* file, const char* path, int fd, bool appendMode, bool bufferWrites) {
+static bool FIRCLSFileInit(FIRCLSFile* file, int fd, bool appendMode, bool bufferWrites) {
   if (!file) {
     FIRCLSSDKLog("Error: file is null\n");
     return false;
@@ -85,16 +83,9 @@ static bool FIRCLSFileInit(
 
   file->writtenLength = 0;
   if (appendMode) {
-    NSError* attributesError;
-    NSString* objCPath = [NSString stringWithCString:path encoding:NSUTF8StringEncoding];
-    NSDictionary* fileAttributes =
-        [[NSFileManager defaultManager] attributesOfItemAtPath:objCPath error:&attributesError];
-    if (attributesError != nil) {
-      FIRCLSErrorLog(@"Failed to read filesize from %@ with error %@", objCPath, attributesError);
-      return false;
-    }
-    NSNumber* fileSizeNumber = [fileAttributes objectForKey:NSFileSize];
-    long long currentFileSize = [fileSizeNumber longLongValue];
+    struct stat fileStats;
+    fstat(fd, &fileStats);
+    off_t currentFileSize = fileStats.st_size;
     if (currentFileSize > 0) {
       file->writtenLength += currentFileSize;
     }
@@ -142,7 +133,7 @@ bool FIRCLSFileInitWithPathMode(FIRCLSFile* file,
     }
   }
 
-  return FIRCLSFileInit(file, path, fd, appendMode, bufferWrites);
+  return FIRCLSFileInit(file, fd, appendMode, bufferWrites);
 }
 
 bool FIRCLSFileClose(FIRCLSFile* file) {
@@ -301,7 +292,7 @@ static void FIRCLSFileWriteUnbufferedStringWithSuffix(FIRCLSFile* file,
                                                       char suffix) {
   char suffixBuffer[2];
 
-  // collapse the quote + suffix into one single write call, for a small performance win
+  // collaspe the quote + suffix into one single write call, for a small performance win
   suffixBuffer[0] = '"';
   suffixBuffer[1] = suffix;
 
@@ -403,14 +394,14 @@ void FIRCLSFileWriteHexEncodedString(FIRCLSFile* file, const char* string) {
 void FIRCLSFileWriteUInt64(FIRCLSFile* file, uint64_t number, bool hex) {
   char buffer[FIRCLSUInt64StringBufferLength];
   short i = FIRCLSFilePrepareUInt64(buffer, number, hex);
-  char* beginning = &buffer[i];  // Write from a pointer to the beginning of the string.
+  char* beginning = &buffer[i];  // Write from a pointer to the begining of the string.
   FIRCLSFileWriteToFileDescriptorOrBuffer(file, beginning, strlen(beginning));
 }
 
 void FIRCLSFileFDWriteUInt64(int fd, uint64_t number, bool hex) {
   char buffer[FIRCLSUInt64StringBufferLength];
   short i = FIRCLSFilePrepareUInt64(buffer, number, hex);
-  char* beginning = &buffer[i];  // Write from a pointer to the beginning of the string.
+  char* beginning = &buffer[i];  // Write from a pointer to the begining of the string.
   FIRCLSFileWriteWithRetries(fd, beginning, strlen(beginning));
 }
 
@@ -485,7 +476,7 @@ void FIRCLSFileWriteCollectionStart(FIRCLSFile* file, const char openingChar) {
   string[1] = openingChar;
 
   if (file->needComma) {
-    FIRCLSFileWriteToFileDescriptorOrBuffer(file, string, 2);  // write the separator + opening char
+    FIRCLSFileWriteToFileDescriptorOrBuffer(file, string, 2);  // write the seperator + opening char
   } else {
     FIRCLSFileWriteToFileDescriptorOrBuffer(file, &string[1], 1);  // write only the opening char
   }
@@ -643,7 +634,7 @@ NSArray* FIRCLSFileReadSections(const char* path,
 
   NSMutableArray* array = [NSMutableArray array];
 
-  // loop through all the entries, and
+  // loop through all the entires, and
   for (NSString* component in components) {
     NSData* data = [component dataUsingEncoding:NSUTF8StringEncoding];
 

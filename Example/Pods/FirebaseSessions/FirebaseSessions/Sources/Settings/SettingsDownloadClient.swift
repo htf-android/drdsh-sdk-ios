@@ -26,7 +26,7 @@ protocol SettingsDownloadClient {
 }
 
 enum SettingsDownloaderError: Error {
-  /// Error constructing the URL
+  /// Error contructing the URL
   case URLError(String)
   /// Error from the URLSession task
   case URLSessionError(String)
@@ -53,10 +53,10 @@ class SettingsDownloader: SettingsDownloadClient {
 
     installations.installationID { result in
       switch result {
-      case let .success(installationsInfo):
-        let request = self.buildRequest(url: validURL, fiid: installationsInfo.0)
+      case let .success(fiid):
+        let request = self.buildRequest(url: validURL, fiid: fiid)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-          if let data {
+          if let data = data {
             if let dict = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
               completion(.success(dict))
             } else {
@@ -64,7 +64,7 @@ class SettingsDownloader: SettingsDownloadClient {
                 .JSONParseError("Failed to parse JSON to dictionary")
               ))
             }
-          } else if let error {
+          } else if let error = error {
             completion(.failure(.URLSessionError(error.localizedDescription)))
           }
         }

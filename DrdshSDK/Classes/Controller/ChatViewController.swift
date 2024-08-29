@@ -485,7 +485,6 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
              if let image = info[.editedImage] as? UIImage {
                  let imageName = "\(NSDate().timeIntervalSince1970 * 1000)"
                 let imagePath = self.getDocumentsDirectory().appendingPathComponent(imageName)
-                
                  if let jpegData = image.jpegData(compressionQuality: 0.5) {
                         try? jpegData.write(to: imagePath)
                     }

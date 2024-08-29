@@ -14,12 +14,20 @@ class GGProgress: NSObject {
     static var shared: GGProgress = GGProgress()
     
     var hub: MBProgressHUD!
-    
+    let keyWindow: UIWindow? = {
+        if let f = UIApplication.shared.windows.first{
+            return f
+        }else if let f = UIApplication.shared.keyWindow{
+            return f
+        }
+        return nil
+    }()
     func showProgress(with title: String = "", file: String = #function,isFullLoader:Bool=true){
+        guard let window = self.keyWindow else { return }
         DispatchQueue.main.async {
             self.hideProgress()
             debugPrint("GGProgress : \(file) strat")
-            self.hub = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+            self.hub = MBProgressHUD.showAdded(to: window, animated: true)
             self.hub.label.text = title
             self.hub.contentColor = UIColor.white
             if isFullLoader{

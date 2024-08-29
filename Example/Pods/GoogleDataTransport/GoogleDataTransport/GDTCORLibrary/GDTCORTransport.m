@@ -71,10 +71,6 @@
   return [[GDTCOREvent alloc] initWithMappingID:_mappingID target:_target];
 }
 
-- (GDTCOREvent *)eventForTransportWithProductData:(GDTCORProductData *)productData {
-  return [[GDTCOREvent alloc] initWithMappingID:_mappingID productData:productData target:_target];
-}
-
 #pragma mark - Private helper methods
 
 /** Sends the given event through the transport pipeline.
@@ -91,18 +87,6 @@
   [self.transformerInstance transformEvent:copiedEvent
                           withTransformers:_transformers
                                 onComplete:completion];
-}
-
-#pragma mark - Force Category Linking
-
-extern void GDTCORInclude_GDTCORLogSourceMetrics_Internal_Category(void);
-
-/// Does nothing when called, and not meant to be called.
-///
-/// This method forces the linker to include categories even if
-/// users do not include the '-ObjC' linker flag in their project.
-+ (void)noop {
-  GDTCORInclude_GDTCORLogSourceMetrics_Internal_Category();
 }
 
 @end
