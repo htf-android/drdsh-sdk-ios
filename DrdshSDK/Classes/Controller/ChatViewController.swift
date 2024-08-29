@@ -480,13 +480,13 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 }
 extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    open func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
          picker.dismiss(animated: true) {
-             if let image = (info[UIImagePickerControllerEditedImage] as? UIImage){
+             if let image = info[.editedImage] as? UIImage {
                  let imageName = "\(NSDate().timeIntervalSince1970 * 1000)"
                 let imagePath = self.getDocumentsDirectory().appendingPathComponent(imageName)
                 
-                 if let jpegData = UIImageJPEGRepresentation(image, 0.5) {
+                 if let jpegData = image.jpegData(compressionQuality: 0.5) {
                         try? jpegData.write(to: imagePath)
                     }
                 if #available(iOS 11.0, *) {
