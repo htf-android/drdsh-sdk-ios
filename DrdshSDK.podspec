@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DrdshSDK'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.summary          = 'To Build Excellent Customer Experience, Connect With DRDSH.'
 
 # This description is used to generate tags and improve search results.
@@ -32,15 +32,15 @@ We have influential engagement products and potent customer service with flexibi
   s.source_files = 'DrdshSDK/Classes/**/*'
   s.swift_version = '5.0'
   s.platform     = :ios, '13.0'
-  s.dependency 'SwiftyJSON', '~> 4.0'
-  s.dependency 'MBProgressHUD'
-  s.dependency 'IQKeyboardManagerSwift', '6.2.1'
-  s.dependency 'Socket.IO-Client-Swift','15.2.0'
+  s.ios.dependency 'SwiftyJSON', '~> 4.0'
+  s.ios.dependency 'MBProgressHUD'
+  s.ios.dependency 'IQKeyboardManagerSwift', '6.2.1'
+  s.ios.dependency 'Socket.IO-Client-Swift','15.2.0'
    s.resource_bundles = {
      'DrdshSDK' => ['DrdshSDK/Assets/**/*']
    }
    s.requires_arc = true
- #  s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0','OTHER_LDFLAGS' => '-ObjC'  }
+   s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0'}
  #  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64','IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
 #      s.subspec "Crash" do |crash|

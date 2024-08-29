@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Load View Controller-->
+        <scene sceneID="xhy-Mw-bwP">
+            <objects>
+                <viewController storyboardIdentifier="MainLoadViewController" id="nON-Kh-6vS" customClass="MainLoadViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SIH-Gl-XUR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zOY-tl-IKu">
+                                <rect key="frame" x="20" y="64" width="374" height="360"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGN-P7-iAK" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pji-b6-ZBV">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pji-b6-ZBV" secondAttribute="bottom" id="DRl-sF-b5d"/>
+                                            <constraint firstAttribute="trailing" secondItem="pji-b6-ZBV" secondAttribute="trailing" constant="10" id="jIo-Kr-Txq"/>
+                                            <constraint firstItem="pji-b6-ZBV" firstAttribute="top" secondItem="MGN-P7-iAK" secondAttribute="top" id="tw4-zA-axE"/>
+                                            <constraint firstItem="pji-b6-ZBV" firstAttribute="leading" secondItem="MGN-P7-iAK" secondAttribute="leading" constant="10" id="xhh-qT-e0u"/>
+                                            <constraint firstAttribute="height" constant="50" id="yis-8m-8UW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5m-zx-P6A" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZR-Fn-s8I">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="WZR-Fn-s8I" firstAttribute="leading" secondItem="H5m-zx-P6A" secondAttribute="leading" constant="10" id="SKf-qY-YWZ"/>
+                                            <constraint firstItem="WZR-Fn-s8I" firstAttribute="top" secondItem="H5m-zx-P6A" secondAttribute="top" id="XAr-Tw-DsD"/>
+                                            <constraint firstAttribute="height" constant="50" id="cBo-kv-1Il"/>
+                                            <constraint firstAttribute="bottom" secondItem="WZR-Fn-s8I" secondAttribute="bottom" id="oAY-tQ-Wbp"/>
+                                            <constraint firstAttribute="trailing" secondItem="WZR-Fn-s8I" secondAttribute="trailing" constant="10" id="svQ-cp-VQg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUf-D3-ecT" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vr1-cZ-6mx">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vr1-cZ-6mx" secondAttribute="trailing" constant="10" id="4rr-C4-LCD"/>
+                                            <constraint firstItem="vr1-cZ-6mx" firstAttribute="top" secondItem="yUf-D3-ecT" secondAttribute="top" id="QgE-CT-qLc"/>
+                                            <constraint firstItem="vr1-cZ-6mx" firstAttribute="leading" secondItem="yUf-D3-ecT" secondAttribute="leading" constant="10" id="Xs9-Pd-v9R"/>
+                                            <constraint firstAttribute="bottom" secondItem="vr1-cZ-6mx" secondAttribute="bottom" id="Y4J-sF-9LK"/>
+                                            <constraint firstAttribute="height" constant="50" id="mAX-oU-fDZ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-B3-56D" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="195" width="374" height="100"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your Question or message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2J-bg-Hyl">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="9Nz-L9-POY"/>
+                                            <constraint firstAttribute="trailing" secondItem="x2J-bg-Hyl" secondAttribute="trailing" constant="10" id="DnK-Fu-KCG"/>
+                                            <constraint firstItem="x2J-bg-Hyl" firstAttribute="top" secondItem="qYe-B3-56D" secondAttribute="top" id="F2s-NP-5gQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="x2J-bg-Hyl" secondAttribute="bottom" id="i0V-Ix-9XQ"/>
+                                            <constraint firstItem="x2J-bg-Hyl" firstAttribute="leading" secondItem="qYe-B3-56D" secondAttribute="leading" constant="10" id="nv7-Ws-yVs"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-bT-XlS">
+                                        <rect key="frame" x="0.0" y="310" width="374" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cd-NN-wBy" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Start Chat">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6cd-NN-wBy" firstAttribute="leading" secondItem="sCf-bT-XlS" secondAttribute="leading" id="AhI-Qk-V9B"/>
+                                            <constraint firstAttribute="trailing" secondItem="6cd-NN-wBy" secondAttribute="trailing" id="CSI-D0-Z3H"/>
+                                            <constraint firstItem="6cd-NN-wBy" firstAttribute="top" secondItem="sCf-bT-XlS" secondAttribute="top" id="Ch8-2Z-2QC"/>
+                                            <constraint firstAttribute="height" constant="50" id="Wg7-z8-wJF"/>
+                                            <constraint firstAttribute="bottom" secondItem="6cd-NN-wBy" secondAttribute="bottom" id="eec-jQ-DrW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EXI-7Z-g82"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zOY-tl-IKu" firstAttribute="top" secondItem="EXI-7Z-g82" secondAttribute="top" constant="20" id="OmC-9K-7qe"/>
+                            <constraint firstItem="zOY-tl-IKu" firstAttribute="leading" secondItem="SIH-Gl-XUR" secondAttribute="leading" constant="20" id="ZNf-V0-gxT"/>
+                            <constraint firstAttribute="trailing" secondItem="zOY-tl-IKu" secondAttribute="trailing" constant="20" id="qZZ-pi-And"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="6cd-NN-wBy" id="5ZS-Sa-GN0"/>
+                        <outlet property="txtEmailAddress" destination="WZR-Fn-s8I" id="5L7-Ux-xhj"/>
+                        <outlet property="txtFullName" destination="pji-b6-ZBV" id="1xn-Bf-MTh"/>
+                        <outlet property="txtMobile" destination="vr1-cZ-6mx" id="d6z-wC-LE8"/>
+                        <outlet property="txtTypeYourQuestion" destination="x2J-bg-Hyl" id="VXI-tB-ccj"/>
+                        <outlet property="viewEmailAddress" destination="H5m-zx-P6A" id="T9e-HE-94z"/>
+                        <outlet property="viewFullName" destination="MGN-P7-iAK" id="iaF-XC-AO5"/>
+                        <outlet property="viewMobile" destination="yUf-D3-ecT" id="gng-PG-IJB"/>
+                        <outlet property="viewTypeYourQuestion" destination="qYe-B3-56D" id="BjI-dT-VEg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgg-at-NAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="103"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="V7K-8m-Xo7">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="VNX-Ov-BDt" customClass="ChatViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ESZ-yh-fnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PpW-5X-K0c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-aT-3cO" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f1W-LA-0wf">
+                                                <rect key="frame" x="10" y="10" width="91.5" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9g4-Ru-vYi" customClass="GGImageViewPopup" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="608-aq-gzk"/>
+                                                            <constraint firstAttribute="height" constant="40" id="Mww-er-hJB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYV-7Y-hAF">
+                                                        <rect key="frame" x="50" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rfq-LK-rdn">
+                                                <rect key="frame" x="264" y="10" width="140" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRo-yk-C8R" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="7K5-WL-9Lp"/>
+                                                            <constraint firstAttribute="height" constant="40" id="dFX-lw-mLT"/>
+                                                        </constraints>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7b-7k-qBq" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="BDl-6G-xcN"/>
+                                                            <constraint firstAttribute="height" constant="40" id="GxV-HM-gnz"/>
+                                                        </constraints>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXG-gf-Yef" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="LeE-7N-x2S"/>
+                                                            <constraint firstAttribute="height" constant="40" id="MtO-W6-cCo"/>
+                                                        </constraints>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="f1W-LA-0wf" firstAttribute="centerY" secondItem="X4t-aT-3cO" secondAttribute="centerY" id="akK-Pi-UVo"/>
+                                            <constraint firstAttribute="height" constant="60" id="foH-Jb-VrH"/>
+                                            <constraint firstItem="f1W-LA-0wf" firstAttribute="leading" secondItem="X4t-aT-3cO" secondAttribute="leading" constant="10" id="gLF-KF-5WD"/>
+                                            <constraint firstItem="Rfq-LK-rdn" firstAttribute="centerY" secondItem="X4t-aT-3cO" secondAttribute="centerY" id="lma-R1-Bgi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rfq-LK-rdn" secondAttribute="trailing" constant="10" id="pFT-4O-zsI"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c3r-MA-MUl">
+                                        <rect key="frame" x="0.0" y="70" width="414" height="648"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AgentTableViewCell" rowHeight="93" id="eSt-2V-md9" customClass="AgentTableViewCell" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSt-2V-md9" id="QhE-q1-M43">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-YW-fkO" customClass="GGImageViewPopup" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="fbj-Fo-4Ap"/>
+                                                                <constraint firstAttribute="height" constant="40" id="gDN-bu-Xfy"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu3-xt-W3d">
+                                                            <rect key="frame" x="60" y="5" width="344" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="17" id="4Uc-U1-lyU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZA-L2-dbu">
+                                                            <rect key="frame" x="60" y="27" width="220" height="61"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lis-Gr-v2L">
+                                                                    <rect key="frame" x="10" y="5" width="200" height="51"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3R-38-v81">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MxP-DJ-0fr" customClass="GGImageViewPopup" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="34" width="200" height="200"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="200" id="rLf-LF-VnM"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2H-UB-iFV">
+                                                                            <rect key="frame" x="0.0" y="34" width="200" height="17"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="17" id="cGe-IK-mmq"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="lis-Gr-v2L" secondAttribute="trailing" constant="10" id="XRE-2j-rQa"/>
+                                                                <constraint firstAttribute="bottom" secondItem="lis-Gr-v2L" secondAttribute="bottom" constant="5" id="bmK-fP-ptZ"/>
+                                                                <constraint firstItem="lis-Gr-v2L" firstAttribute="top" secondItem="mZA-L2-dbu" secondAttribute="top" constant="5" id="i7d-14-lsS"/>
+                                                                <constraint firstItem="lis-Gr-v2L" firstAttribute="leading" secondItem="mZA-L2-dbu" secondAttribute="leading" constant="10" id="yFs-Y3-thm"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mZA-L2-dbu" secondAttribute="trailing" constant="10" id="4tT-qD-zUw"/>
+                                                        <constraint firstItem="mZA-L2-dbu" firstAttribute="leading" secondItem="hL4-YW-fkO" secondAttribute="trailing" constant="10" id="9Ya-Pr-TOa"/>
+                                                        <constraint firstItem="hL4-YW-fkO" firstAttribute="top" secondItem="QhE-q1-M43" secondAttribute="top" constant="10" id="BTY-rR-Os4"/>
+                                                        <constraint firstItem="hu3-xt-W3d" firstAttribute="leading" secondItem="hL4-YW-fkO" secondAttribute="trailing" constant="10" id="CiH-ee-E9H"/>
+                                                        <constraint firstItem="hu3-xt-W3d" firstAttribute="top" secondItem="QhE-q1-M43" secondAttribute="top" constant="5" id="IXY-ZK-geV"/>
+                                                        <constraint firstItem="hL4-YW-fkO" firstAttribute="leading" secondItem="QhE-q1-M43" secondAttribute="leading" constant="10" id="aRH-oY-aYo"/>
+                                                        <constraint firstItem="mZA-L2-dbu" firstAttribute="top" secondItem="hu3-xt-W3d" secondAttribute="bottom" constant="5" id="iBq-ab-GGw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mZA-L2-dbu" secondAttribute="bottom" constant="5" id="ioe-Xb-8B7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hu3-xt-W3d" secondAttribute="trailing" constant="10" id="kIg-G6-vbm"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="MxP-DJ-0fr" firstAttribute="width" relation="lessThanOrEqual" secondItem="eSt-2V-md9" secondAttribute="width" multiplier="0.7" id="lGu-fY-laz"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="backView" destination="mZA-L2-dbu" id="sUg-Qf-dd4"/>
+                                                    <outlet property="imgAttachment" destination="MxP-DJ-0fr" id="USU-XC-IcY"/>
+                                                    <outlet property="imgProfile" destination="hL4-YW-fkO" id="hZt-Rf-hca"/>
+                                                    <outlet property="lblMessage" destination="u3R-38-v81" id="EYk-gS-Q1A"/>
+                                                    <outlet property="lblName" destination="hu3-xt-W3d" id="WRZ-bF-0w6"/>
+                                                    <outlet property="lblTime" destination="f2H-UB-iFV" id="Zag-PC-kCk"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyTableViewCell" rowHeight="93" id="4oh-BT-GXP" customClass="MyTableViewCell" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="137.5" width="414" height="93"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4oh-BT-GXP" id="wCP-rn-zdc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoT-6g-QB1" customClass="GGImageViewPopup" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                            <rect key="frame" x="364" y="10" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="Bfq-yz-GkH"/>
+                                                                <constraint firstAttribute="height" constant="40" id="SDp-iT-vOz"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0B-BW-PMo">
+                                                            <rect key="frame" x="10" y="5" width="344" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="17" id="gGx-Ak-5ap"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWb-d2-xGF">
+                                                            <rect key="frame" x="134" y="27" width="220" height="61"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-ES-K5Z">
+                                                                    <rect key="frame" x="10" y="5" width="200" height="51"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-c0-ZtD">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hAt-nZ-8un" customClass="GGImageViewPopup" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="34" width="200" height="200"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="200" id="5v1-Oh-pBU"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-Dy-0hj">
+                                                                            <rect key="frame" x="0.0" y="34" width="200" height="17"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EY3-DS-cXb">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="17"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="17" id="fCm-J9-ph7"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sent" translatesAutoresizingMaskIntoConstraints="NO" id="lrM-zb-gVg" customClass="GGImageViewPopup" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                                    <rect key="frame" x="183" y="0.0" width="17" height="17"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="17" id="OWi-us-FXl"/>
+                                                                                        <constraint firstAttribute="width" constant="17" id="lN1-bC-Gww"/>
+                                                                                    </constraints>
+                                                                                </imageView>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="2Mz-ES-K5Z" secondAttribute="trailing" constant="10" id="FuJ-eV-pJp"/>
+                                                                <constraint firstItem="2Mz-ES-K5Z" firstAttribute="top" secondItem="dWb-d2-xGF" secondAttribute="top" constant="5" id="Of8-dW-cag"/>
+                                                                <constraint firstItem="2Mz-ES-K5Z" firstAttribute="leading" secondItem="dWb-d2-xGF" secondAttribute="leading" constant="10" id="fH2-Lg-ah8"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2Mz-ES-K5Z" secondAttribute="bottom" constant="5" id="fNA-gn-itf"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="dWb-d2-xGF" secondAttribute="bottom" constant="5" id="Fja-tg-pi3"/>
+                                                        <constraint firstItem="ZoT-6g-QB1" firstAttribute="leading" secondItem="dWb-d2-xGF" secondAttribute="trailing" constant="10" id="PGC-h4-MzM"/>
+                                                        <constraint firstItem="ZoT-6g-QB1" firstAttribute="leading" secondItem="z0B-BW-PMo" secondAttribute="trailing" constant="10" id="R0c-cT-wQ4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZoT-6g-QB1" secondAttribute="trailing" constant="10" id="Xpg-NC-46R"/>
+                                                        <constraint firstItem="z0B-BW-PMo" firstAttribute="leading" secondItem="wCP-rn-zdc" secondAttribute="leading" constant="10" id="iDK-kn-d2k"/>
+                                                        <constraint firstItem="dWb-d2-xGF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wCP-rn-zdc" secondAttribute="leading" constant="10" id="jpb-Jg-IzI"/>
+                                                        <constraint firstItem="z0B-BW-PMo" firstAttribute="top" secondItem="wCP-rn-zdc" secondAttribute="top" constant="5" id="pEf-Ah-sQ2"/>
+                                                        <constraint firstItem="dWb-d2-xGF" firstAttribute="top" secondItem="z0B-BW-PMo" secondAttribute="bottom" constant="5" id="sMU-BQ-e86"/>
+                                                        <constraint firstItem="ZoT-6g-QB1" firstAttribute="top" secondItem="wCP-rn-zdc" secondAttribute="top" constant="10" id="t7T-C0-9is"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="hAt-nZ-8un" firstAttribute="width" relation="lessThanOrEqual" secondItem="4oh-BT-GXP" secondAttribute="width" multiplier="0.7" id="swm-iY-CI9"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="backView" destination="dWb-d2-xGF" id="ErY-wV-xKc"/>
+                                                    <outlet property="imgAttachment" destination="hAt-nZ-8un" id="pt8-nU-7FQ"/>
+                                                    <outlet property="imgProfile" destination="ZoT-6g-QB1" id="5Ek-yJ-MXA"/>
+                                                    <outlet property="imgStatus" destination="lrM-zb-gVg" id="B5x-pQ-A06"/>
+                                                    <outlet property="lblMessage" destination="PYi-c0-ZtD" id="mjV-se-82C"/>
+                                                    <outlet property="lblName" destination="z0B-BW-PMo" id="215-4i-p1c"/>
+                                                    <outlet property="lblTime" destination="EY3-DS-cXb" id="Vo9-Rt-F6u"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="systemTableViewCell" rowHeight="93" id="aBP-oD-TMf" customClass="systemTableViewCell" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="230.5" width="414" height="93"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aBP-oD-TMf" id="u6K-yD-1CH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-qV-6tI">
+                                                            <rect key="frame" x="20" y="10" width="374" height="73"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="5kO-qV-6tI" firstAttribute="leading" secondItem="u6K-yD-1CH" secondAttribute="leading" constant="20" id="OMj-Or-JPf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5kO-qV-6tI" secondAttribute="trailing" constant="20" id="ee4-Xy-QiB"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5kO-qV-6tI" secondAttribute="bottom" constant="10" id="k76-g5-SkQ"/>
+                                                        <constraint firstItem="5kO-qV-6tI" firstAttribute="top" secondItem="u6K-yD-1CH" secondAttribute="top" constant="10" id="tiI-5P-2cd"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="lblMessage" destination="5kO-qV-6tI" id="5uc-EG-RGW"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="VNX-Ov-BDt" id="v1U-cN-KeW"/>
+                                            <outlet property="delegate" destination="VNX-Ov-BDt" id="EAa-ta-ns9"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-ZP-ccD">
+                                        <rect key="frame" x="0.0" y="728" width="414" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwv-QI-Vvp">
+                                                <rect key="frame" x="5" y="3" width="404" height="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="mwv-QI-Vvp" secondAttribute="bottom" constant="3" id="0y6-DE-IgB"/>
+                                            <constraint firstItem="mwv-QI-Vvp" firstAttribute="leading" secondItem="fTi-ZP-ccD" secondAttribute="leading" constant="5" id="1PG-GK-3CJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="mwv-QI-Vvp" secondAttribute="trailing" constant="5" id="P1J-dh-acI"/>
+                                            <constraint firstItem="mwv-QI-Vvp" firstAttribute="top" secondItem="fTi-ZP-ccD" secondAttribute="top" constant="3" id="gAk-t7-Sld"/>
+                                            <constraint firstAttribute="height" constant="20" id="iFX-TQ-fqr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKd-D9-mds" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="758" width="414" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-jt-dOd">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.5"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="hod-wW-NV5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CNo-fJ-pvX">
+                                                <rect key="frame" x="20" y="10" width="374" height="40"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-WL-uAJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opH-Dt-PXQ" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="VOD-eM-L7I"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="kty-LB-Tzu"/>
+                                                                </constraints>
+                                                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                            </button>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-wU-YTk" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="50" y="0.0" width="274" height="40"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8x-p3-Jqo">
+                                                                        <rect key="frame" x="10" y="0.0" width="254" height="40"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="VNX-Ov-BDt" id="gW9-3I-QzL"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="H8x-p3-Jqo" secondAttribute="trailing" constant="10" id="D4S-Te-nZO"/>
+                                                                    <constraint firstItem="H8x-p3-Jqo" firstAttribute="leading" secondItem="XSD-wU-YTk" secondAttribute="leading" constant="10" id="szv-k2-mp2"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="H8x-p3-Jqo" secondAttribute="bottom" id="tKa-Ja-WPi"/>
+                                                                    <constraint firstItem="H8x-p3-Jqo" firstAttribute="top" secondItem="XSD-wU-YTk" secondAttribute="top" id="xq0-fH-Iv6"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvG-9a-Sx2" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="334" y="0.0" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="4Rv-ze-CZb"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="4Yy-t7-cxd"/>
+                                                                </constraints>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-3y-44P" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="BH2-px-po3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="Powered by Drdsh">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ky8-jt-dOd" secondAttribute="trailing" id="3J7-3l-b1Q"/>
+                                            <constraint firstItem="ky8-jt-dOd" firstAttribute="top" secondItem="TKd-D9-mds" secondAttribute="top" id="7yl-OW-uKb"/>
+                                            <constraint firstAttribute="trailing" secondItem="CNo-fJ-pvX" secondAttribute="trailing" constant="20" id="8V2-Xm-iZr"/>
+                                            <constraint firstItem="ky8-jt-dOd" firstAttribute="leading" secondItem="TKd-D9-mds" secondAttribute="leading" id="DwS-YD-W8b"/>
+                                            <constraint firstItem="CNo-fJ-pvX" firstAttribute="top" secondItem="TKd-D9-mds" secondAttribute="top" constant="10" id="LlE-Xn-Vk1"/>
+                                            <constraint firstItem="CNo-fJ-pvX" firstAttribute="leading" secondItem="TKd-D9-mds" secondAttribute="leading" constant="20" id="X7v-IV-1cK"/>
+                                            <constraint firstAttribute="bottom" secondItem="CNo-fJ-pvX" secondAttribute="bottom" constant="10" id="bK4-bg-dbW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aqd-uP-dBU"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="PpW-5X-K0c" firstAttribute="top" secondItem="Aqd-uP-dBU" secondAttribute="top" id="0j4-Dw-tff"/>
+                            <constraint firstItem="PpW-5X-K0c" firstAttribute="leading" secondItem="ESZ-yh-fnJ" secondAttribute="leading" id="MUE-Ko-loD"/>
+                            <constraint firstItem="Aqd-uP-dBU" firstAttribute="bottom" secondItem="PpW-5X-K0c" secondAttribute="bottom" id="b95-Jv-bbL"/>
+                            <constraint firstItem="PpW-5X-K0c" firstAttribute="trailing" secondItem="ESZ-yh-fnJ" secondAttribute="trailing" id="pnM-nN-2ZK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="agentView" destination="X4t-aT-3cO" id="s5C-Jj-NHN"/>
+                        <outlet property="btnAttachment" destination="opH-Dt-PXQ" id="LfF-rm-KdU"/>
+                        <outlet property="btnDisLike" destination="PRo-yk-C8R" id="8du-ZP-NWj"/>
+                        <outlet property="btnLike" destination="b7b-7k-qBq" id="pWj-PX-ftH"/>
+                        <outlet property="btnMail" destination="RXG-gf-Yef" id="odZ-ul-5G9"/>
+                        <outlet property="btnSend" destination="BvG-9a-Sx2" id="1qv-ZH-vmj"/>
+                        <outlet property="btnWebSite" destination="ck9-3y-44P" id="rzj-nR-FnW"/>
+                        <outlet property="imgView" destination="9g4-Ru-vYi" id="tJZ-te-hWp"/>
+                        <outlet property="lblName" destination="xYV-7Y-hAF" id="Ero-4u-iEl"/>
+                        <outlet property="lblTyping" destination="mwv-QI-Vvp" id="ffK-Tz-mOU"/>
+                        <outlet property="messageView" destination="TKd-D9-mds" id="YoZ-Fk-1WC"/>
+                        <outlet property="table" destination="c3r-MA-MUl" id="eYL-MF-T8K"/>
+                        <outlet property="txtMessage" destination="H8x-p3-Jqo" id="8Ke-0a-wGm"/>
+                        <outlet property="typingView" destination="fTi-ZP-ccD" id="2uF-6k-Vn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lwn-il-eKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.81159420289856" y="101.78571428571428"/>
+        </scene>
+        <!--Rate View Controller-->
+        <scene sceneID="uSK-VD-eHI">
+            <objects>
+                <viewController storyboardIdentifier="RateViewController" id="4tF-U6-c03" customClass="RateViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qd0-nB-ld6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jug-k3-cK4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CL5-ex-uEE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoo-Hf-WFQ" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z54-px-3Rq" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                <rect key="frame" x="30" y="290.5" width="354" height="315"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FPn-q2-ad4">
+                                        <rect key="frame" x="30" y="20" width="294" height="275"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtw-mV-5jw">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="40"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EKi-5c-vNe">
+                                                        <rect key="frame" x="72" y="0.0" width="150" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aM-Yf-qrg" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="W1V-Yw-YVx"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="hDH-t9-zlV"/>
+                                                                </constraints>
+                                                                <state key="normal" image="like.png"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-0o-JOX" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="55" y="0.0" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="Ltz-Il-4Mr"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="d0p-C9-SLR"/>
+                                                                </constraints>
+                                                                <state key="normal" image="dislike.png"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytq-8A-4Y2" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="110" y="0.0" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="Cqt-pC-U7v"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="Rwq-PI-pXk"/>
+                                                                </constraints>
+                                                                <state key="normal" image="mail.png"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="EKi-5c-vNe" firstAttribute="top" secondItem="Mtw-mV-5jw" secondAttribute="top" id="TDr-LJ-hks"/>
+                                                    <constraint firstAttribute="bottom" secondItem="EKi-5c-vNe" secondAttribute="bottom" id="qZr-1O-qZ7"/>
+                                                    <constraint firstItem="EKi-5c-vNe" firstAttribute="centerX" secondItem="Mtw-mV-5jw" secondAttribute="centerX" id="w94-rz-LqL"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input your email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-gT-oQp">
+                                                <rect key="frame" x="0.0" y="60" width="294" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input your email address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU7-ff-2T6">
+                                                <rect key="frame" x="0.0" y="100.5" width="294" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n87-nC-DNf">
+                                                <rect key="frame" x="0.0" y="135" width="294" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="42P-mC-FDg"/>
+                                                </constraints>
+                                                <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Os1-9n-QMf">
+                                                <rect key="frame" x="0.0" y="225" width="294" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-IQ-zh5">
+                                                        <rect key="frame" x="50" y="0.0" width="194" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PM4-dI-Aze" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
+                                                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="mqu-vv-aFk"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="Close">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXw-SD-igq" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                                <rect key="frame" x="102" y="0.0" width="92" height="50"/>
+                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="mIQ-AN-Sl5"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="Send">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="fW3-IQ-zh5" firstAttribute="top" secondItem="Os1-9n-QMf" secondAttribute="top" id="Ycm-rW-iEk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fW3-IQ-zh5" secondAttribute="trailing" constant="50" id="dlK-vw-TX5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="fW3-IQ-zh5" secondAttribute="bottom" id="uAL-lM-0y5"/>
+                                                    <constraint firstItem="fW3-IQ-zh5" firstAttribute="leading" secondItem="Os1-9n-QMf" secondAttribute="leading" constant="50" id="vjH-KM-7kt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FPn-q2-ad4" secondAttribute="bottom" constant="20" id="6DU-mk-8KZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="FPn-q2-ad4" secondAttribute="trailing" constant="30" id="Cm2-CB-gAr"/>
+                                    <constraint firstItem="FPn-q2-ad4" firstAttribute="top" secondItem="z54-px-3Rq" secondAttribute="top" constant="20" id="lDr-Dw-5Wo"/>
+                                    <constraint firstItem="FPn-q2-ad4" firstAttribute="leading" secondItem="z54-px-3Rq" secondAttribute="leading" constant="30" id="na0-lu-eUO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pwi-aA-wmj"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.24697666952054795" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pwi-aA-wmj" firstAttribute="trailing" secondItem="Aoo-Hf-WFQ" secondAttribute="trailing" id="CdS-L0-2FB"/>
+                            <constraint firstAttribute="bottom" secondItem="Aoo-Hf-WFQ" secondAttribute="bottom" id="Pcx-m0-73V"/>
+                            <constraint firstItem="z54-px-3Rq" firstAttribute="centerX" secondItem="CL5-ex-uEE" secondAttribute="centerX" id="S8Q-bk-3wa"/>
+                            <constraint firstItem="z54-px-3Rq" firstAttribute="centerY" secondItem="CL5-ex-uEE" secondAttribute="centerY" id="S9d-b5-Ct0"/>
+                            <constraint firstItem="z54-px-3Rq" firstAttribute="leading" secondItem="CL5-ex-uEE" secondAttribute="leading" constant="30" id="evN-tF-3ZD"/>
+                            <constraint firstItem="Aoo-Hf-WFQ" firstAttribute="leading" secondItem="pwi-aA-wmj" secondAttribute="leading" id="keI-4i-noH"/>
+                            <constraint firstItem="Aoo-Hf-WFQ" firstAttribute="top" secondItem="CL5-ex-uEE" secondAttribute="top" id="sEK-hx-4FK"/>
+                            <constraint firstAttribute="trailing" secondItem="z54-px-3Rq" secondAttribute="trailing" constant="30" id="uo1-tW-Lm0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="PM4-dI-Aze" id="QvE-UI-qsX"/>
+                        <outlet property="btnCancel1" destination="Aoo-Hf-WFQ" id="UuR-Xp-Bhw"/>
+                        <outlet property="btnDisLike" destination="fWd-0o-JOX" id="RaJ-Es-tjz"/>
+                        <outlet property="btnLike" destination="3aM-Yf-qrg" id="S4W-W9-dzP"/>
+                        <outlet property="btnMail" destination="Ytq-8A-4Y2" id="z5c-K4-W1C"/>
+                        <outlet property="btnSend" destination="zXw-SD-igq" id="jlK-YE-qhl"/>
+                        <outlet property="lblDiscription" destination="SU7-ff-2T6" id="Qj6-LU-GMi"/>
+                        <outlet property="lblTitle" destination="tWn-gT-oQp" id="aLP-Jn-x8J"/>
+                        <outlet property="txtComment" destination="n87-nC-DNf" id="eag-2m-fee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdP-7V-F0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.5942028985507" y="101.78571428571428"/>
+        </scene>
+        <!--Offline View Controller-->
+        <scene sceneID="FZb-iX-jWh">
+            <objects>
+                <viewController storyboardIdentifier="OfflineViewController" id="bfV-Dz-p9w" customClass="OfflineViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vup-vU-ZMq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3k9-oe-W5u">
+                                <rect key="frame" x="20" y="64" width="374" height="425"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-vC-50U" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97o-2a-xG9">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JpR-uq-EbO"/>
+                                            <constraint firstAttribute="bottom" secondItem="97o-2a-xG9" secondAttribute="bottom" id="keN-6c-Fkr"/>
+                                            <constraint firstItem="97o-2a-xG9" firstAttribute="leading" secondItem="zzt-vC-50U" secondAttribute="leading" constant="10" id="moE-vu-1UN"/>
+                                            <constraint firstItem="97o-2a-xG9" firstAttribute="top" secondItem="zzt-vC-50U" secondAttribute="top" id="tlg-N4-zLt"/>
+                                            <constraint firstAttribute="trailing" secondItem="97o-2a-xG9" secondAttribute="trailing" constant="10" id="wSM-N3-BNb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bop-v9-O5w" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txF-Y8-06U">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="txF-Y8-06U" secondAttribute="bottom" id="Ppu-Wz-Ecp"/>
+                                            <constraint firstAttribute="trailing" secondItem="txF-Y8-06U" secondAttribute="trailing" constant="10" id="ZKK-a7-6f1"/>
+                                            <constraint firstItem="txF-Y8-06U" firstAttribute="top" secondItem="Bop-v9-O5w" secondAttribute="top" id="kYy-Qo-dwZ"/>
+                                            <constraint firstItem="txF-Y8-06U" firstAttribute="leading" secondItem="Bop-v9-O5w" secondAttribute="leading" constant="10" id="msa-Uw-hyn"/>
+                                            <constraint firstAttribute="height" constant="50" id="xJw-Ja-IG6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwI-mV-ph3" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5wh-rR-mKR">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5wh-rR-mKR" firstAttribute="leading" secondItem="bwI-mV-ph3" secondAttribute="leading" constant="10" id="782-UQ-sDx"/>
+                                            <constraint firstAttribute="trailing" secondItem="5wh-rR-mKR" secondAttribute="trailing" constant="10" id="Sql-J8-KWJ"/>
+                                            <constraint firstAttribute="height" constant="50" id="dV3-CV-tEo"/>
+                                            <constraint firstAttribute="bottom" secondItem="5wh-rR-mKR" secondAttribute="bottom" id="dsI-ae-g8D"/>
+                                            <constraint firstItem="5wh-rR-mKR" firstAttribute="top" secondItem="bwI-mV-ph3" secondAttribute="top" id="mge-Xz-6qR"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5o-25-O3y" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="195" width="374" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hnt-Me-IaD">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Hnt-Me-IaD" firstAttribute="leading" secondItem="w5o-25-O3y" secondAttribute="leading" constant="10" id="3ee-iW-6Pj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hnt-Me-IaD" secondAttribute="trailing" constant="10" id="7Eg-2X-SQ0"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hnt-Me-IaD" secondAttribute="bottom" id="9HL-gZ-1w8"/>
+                                            <constraint firstAttribute="height" constant="50" id="Qgw-Sg-RpY"/>
+                                            <constraint firstItem="Hnt-Me-IaD" firstAttribute="top" secondItem="w5o-25-O3y" secondAttribute="top" id="agf-tf-u3r"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG5-3v-w6j" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="260" width="374" height="100"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your Question or message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deM-Qw-Hgm">
+                                                <rect key="frame" x="10" y="0.0" width="354" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="deM-Qw-Hgm" secondAttribute="bottom" id="R66-4p-xXf"/>
+                                            <constraint firstItem="deM-Qw-Hgm" firstAttribute="top" secondItem="UG5-3v-w6j" secondAttribute="top" id="RAj-Cp-OBP"/>
+                                            <constraint firstItem="deM-Qw-Hgm" firstAttribute="leading" secondItem="UG5-3v-w6j" secondAttribute="leading" constant="10" id="Yai-af-H5C"/>
+                                            <constraint firstAttribute="height" constant="100" id="eG7-gC-qOW"/>
+                                            <constraint firstAttribute="trailing" secondItem="deM-Qw-Hgm" secondAttribute="trailing" constant="10" id="gLg-cH-x66"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k56-im-5jL">
+                                        <rect key="frame" x="0.0" y="375" width="374" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elK-0H-UNQ" customClass="GGButton" customModule="DrdshChatSDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Send Message">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="elK-0H-UNQ" firstAttribute="leading" secondItem="k56-im-5jL" secondAttribute="leading" id="Kng-IZ-eyq"/>
+                                            <constraint firstAttribute="height" constant="50" id="T3y-C1-oEz"/>
+                                            <constraint firstAttribute="trailing" secondItem="elK-0H-UNQ" secondAttribute="trailing" id="pqt-aY-d2v"/>
+                                            <constraint firstAttribute="bottom" secondItem="elK-0H-UNQ" secondAttribute="bottom" id="ydZ-AB-gIM"/>
+                                            <constraint firstItem="elK-0H-UNQ" firstAttribute="top" secondItem="k56-im-5jL" secondAttribute="top" id="zcO-S2-cul"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="90T-yr-X0K"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3k9-oe-W5u" firstAttribute="top" secondItem="90T-yr-X0K" secondAttribute="top" constant="20" id="6Rr-z4-aSv"/>
+                            <constraint firstItem="3k9-oe-W5u" firstAttribute="leading" secondItem="vup-vU-ZMq" secondAttribute="leading" constant="20" id="8KT-eS-JAL"/>
+                            <constraint firstAttribute="trailing" secondItem="3k9-oe-W5u" secondAttribute="trailing" constant="20" id="ftz-jK-ZTE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="elK-0H-UNQ" id="ndU-M0-IsD"/>
+                        <outlet property="txtEmailAddress" destination="txF-Y8-06U" id="RAd-Cu-7yI"/>
+                        <outlet property="txtFullName" destination="97o-2a-xG9" id="zeg-WS-FMA"/>
+                        <outlet property="txtMobile" destination="5wh-rR-mKR" id="5xV-i5-k90"/>
+                        <outlet property="txtSubject" destination="Hnt-Me-IaD" id="8Bf-aC-sdi"/>
+                        <outlet property="txtTypeYourQuestion" destination="deM-Qw-Hgm" id="EQ8-kg-WFh"/>
+                        <outlet property="viewEmailAddress" destination="Bop-v9-O5w" id="pTe-iL-i8f"/>
+                        <outlet property="viewFullName" destination="zzt-vC-50U" id="NrI-19-lNa"/>
+                        <outlet property="viewMobile" destination="bwI-mV-ph3" id="mjJ-zK-dXK"/>
+                        <outlet property="viewSubject" destination="w5o-25-O3y" id="DgV-wK-ZBs"/>
+                        <outlet property="viewTypeYourQuestion" destination="UG5-3v-w6j" id="lCy-Qm-HXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkM-zz-qZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.81159420289856" y="762.72321428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dislike.png" width="120" height="120"/>
+        <image name="like.png" width="120" height="120"/>
+        <image name="mail.png" width="120" height="120"/>
+        <image name="sent" width="15" height="15"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
