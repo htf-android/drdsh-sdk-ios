@@ -32,12 +32,8 @@ let package = Package(
             ],
             path: "Sources",
             resources: [
-                .process("DrdshSDK/Resources")
+                .process("Resources")
             ]
-        ),
-        .testTarget(
-            name: "DrdshSDKTests",
-            dependencies: ["DrdshSDK"]
         ),
     ],
     swiftLanguageVersions: [.v5]

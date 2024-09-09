@@ -40,49 +40,26 @@ public class DrdshSDK : NSObject {
         DrdshSDK.shared.config = config
         if DrdshSDK.shared.config.appSid == ""{
             let alert = UIAlertController(title: DrdshSDK.shared.localizedString(stringKey:"Error"), message: DrdshSDK.shared.localizedString(stringKey:"appSid can not be blank"), preferredStyle: UIAlertController.Style.alert)
-          alert.addAction(UIAlertAction(title: DrdshSDK.shared.localizedString(stringKey:"Ok"), style: UIAlertAction.Style.default, handler: nil))
-          DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: {
-             
-          })
+            alert.addAction(UIAlertAction(title: DrdshSDK.shared.localizedString(stringKey:"Ok"), style: UIAlertAction.Style.default, handler: nil))
+            DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: {
+                
+            })
         }
-//        else if DrdshSDK.shared.config.FCM_Token == ""{
-//            let alert = UIAlertController(title: DrdshSDK.shared.localizedString(stringKey:"Error"), message: DrdshSDK.shared.localizedString(stringKey:"FCM Token can not be blank"), preferredStyle: UIAlertController.Style.alert)
-//          alert.addAction(UIAlertAction(title: DrdshSDK.shared.localizedString(stringKey:"Ok"), style: UIAlertAction.Style.default, handler: nil))
-//          DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: {
-//             
-//          })
-//        }else if DrdshSDK.shared.config.FCM_Auth_Key == ""{
-//            let alert = UIAlertController(title: DrdshSDK.shared.localizedString(stringKey:"Error"), message: DrdshSDK.shared.localizedString(stringKey:"FCM Auth Key can not be blank"), preferredStyle: UIAlertController.Style.alert)
-//          alert.addAction(UIAlertAction(title: DrdshSDK.shared.localizedString(stringKey:"Ok"), style: UIAlertAction.Style.default, handler: nil))
-//          DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: {
-//             
-//          })
-//        }
+        //        else if DrdshSDK.shared.config.FCM_Token == ""{
+        //            let alert = UIAlertController(title: DrdshSDK.shared.localizedString(stringKey:"Error"), message: DrdshSDK.shared.localizedString(stringKey:"FCM Token can not be blank"), preferredStyle: UIAlertController.Style.alert)
+        //          alert.addAction(UIAlertAction(title: DrdshSDK.shared.localizedString(stringKey:"Ok"), style: UIAlertAction.Style.default, handler: nil))
+        //          DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: {
+        //
+        //          })
+        //        }else if DrdshSDK.shared.config.FCM_Auth_Key == ""{
+        //            let alert = UIAlertController(title: DrdshSDK.shared.localizedString(stringKey:"Error"), message: DrdshSDK.shared.localizedString(stringKey:"FCM Auth Key can not be blank"), preferredStyle: UIAlertController.Style.alert)
+        //          alert.addAction(UIAlertAction(title: DrdshSDK.shared.localizedString(stringKey:"Ok"), style: UIAlertAction.Style.default, handler: nil))
+        //          DrdshSDK.shared.topViewController()?.present(alert, animated: true, completion: {
+        //
+        //          })
+        //        }
         else{
             let bundle = Bundle.module
-            print(bundle.bundlePath)
-//            if let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateInitialViewController() {
-//                vc.modalPresentationStyle = .overFullScreen
-//                let nav = UINavigationController(rootViewController: vc)
-//                nav.modalPresentationStyle = .overFullScreen
-//                if #available(iOS 13.0, *) {
-//                    let appearance = UINavigationBarAppearance()
-//                    appearance.configureWithDefaultBackground()
-//                    appearance.backgroundColor = DrdshSDK.shared.config.topBarBgColor.Color()
-//                    appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : DrdshSDK.shared.config.titleTextColor.Color(),.font : UIFont.boldSystemFont(ofSize: 17)]
-//                    nav.navigationBar.standardAppearance = appearance;
-//                    nav.navigationBar.scrollEdgeAppearance = appearance;
-//                    nav.navigationBar.compactAppearance = appearance;
-//                 //   navigationBar.barStyle = UIBarStyle.black;
-//                    nav.navigationBar.tintColor = UIColor.black
-//                    nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
-//                   // navigationBar.barStyle = UIBarStyle.default;
-//                }
-//                DrdshSDK.shared.topViewController()?.present(nav, animated: true, completion: {
-//                    completion?(true)
-//                })
-//                // Present or push the view controller as needed
-//            }
             let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateViewController(withIdentifier: "MainLoadViewController") as! MainLoadViewController
             vc.modalPresentationStyle = .overFullScreen
             let nav = UINavigationController(rootViewController: vc)
@@ -95,10 +72,10 @@ public class DrdshSDK : NSObject {
                 nav.navigationBar.standardAppearance = appearance;
                 nav.navigationBar.scrollEdgeAppearance = appearance;
                 nav.navigationBar.compactAppearance = appearance;
-             //   navigationBar.barStyle = UIBarStyle.black;
+                //   navigationBar.barStyle = UIBarStyle.black;
                 nav.navigationBar.tintColor = UIColor.black
                 nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
-               // navigationBar.barStyle = UIBarStyle.default;
+                // navigationBar.barStyle = UIBarStyle.default;
             }
             DrdshSDK.shared.topViewController()?.present(nav, animated: true, completion: {
                 completion?(true)
@@ -107,7 +84,7 @@ public class DrdshSDK : NSObject {
     }
     @objc public class func dismissChat(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
         DrdshSDK.shared.topViewController()?.dismiss(animated: true, completion: {
-             completion?(true)
+            completion?(true)
         })
     }
     func pushViewController(VC:UIViewController,animated: Bool){
@@ -136,55 +113,55 @@ public class DrdshSDK : NSObject {
         debugPrint(base as Any)
         return base
     }
-//    func APICallMain(url:String,newTodo: [String: Any],successHanlder:([String: Any])->Void?,errorHanlder:()->Void?) {
-//      var todosUrlRequest = URLRequest(url: URL(string: url)!)
-//      todosUrlRequest.httpMethod = "POST"
-//      let jsonTodo: Data
-//      do {
-//        jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
-//        todosUrlRequest.httpBody = jsonTodo
-//      } catch {
-//        print("Error: cannot create JSON from todo")
-//        return
-//      }
-//      todosUrlRequest.setValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-//      todosUrlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//      todosUrlRequest.setValue("en", forHTTPHeaderField: "locale")
-//      let session = URLSession.shared
-//        GGProgress.shared.showProgress(isFullLoader:false)
-//      var successHanlder1 = successHanlder
-//      var errorHanlder1 = errorHanlder
-//      let task = session.dataTask(with: todosUrlRequest) {
-//        (data, response, error) in
-//        DispatchQueue.main.async {
-//            GGProgress.shared.hideProgress()
-//        }
-//        guard error == nil else {
-//            errorHanlder1()
-//          print("error calling POST on /todos/1",error!)
-//          return
-//        }
-//        guard let responseData = data else {
-//            errorHanlder1()
-//          print("Error: did not receive data")
-//          return
-//        }
-//        do {
-//          guard let receivedTodo = try JSONSerialization.jsonObject(with: responseData,
-//            options: []) as? [String: Any] else {
-//                errorHanlder1()
-//              print("Could not get JSON from responseData as dictionary")
-//              return
-//          }
-//           successHanlder1(receivedTodo)
-//        } catch  {
-//            errorHanlder1()
-//          print("error parsing response from POST on /todos")
-//          return
-//        }
-//      }
-//      task.resume()
-//    }
+    //    func APICallMain(url:String,newTodo: [String: Any],successHanlder:([String: Any])->Void?,errorHanlder:()->Void?) {
+    //      var todosUrlRequest = URLRequest(url: URL(string: url)!)
+    //      todosUrlRequest.httpMethod = "POST"
+    //      let jsonTodo: Data
+    //      do {
+    //        jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
+    //        todosUrlRequest.httpBody = jsonTodo
+    //      } catch {
+    //        print("Error: cannot create JSON from todo")
+    //        return
+    //      }
+    //      todosUrlRequest.setValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
+    //      todosUrlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    //      todosUrlRequest.setValue("en", forHTTPHeaderField: "locale")
+    //      let session = URLSession.shared
+    //        GGProgress.shared.showProgress(isFullLoader:false)
+    //      var successHanlder1 = successHanlder
+    //      var errorHanlder1 = errorHanlder
+    //      let task = session.dataTask(with: todosUrlRequest) {
+    //        (data, response, error) in
+    //        DispatchQueue.main.async {
+    //            GGProgress.shared.hideProgress()
+    //        }
+    //        guard error == nil else {
+    //            errorHanlder1()
+    //          print("error calling POST on /todos/1",error!)
+    //          return
+    //        }
+    //        guard let responseData = data else {
+    //            errorHanlder1()
+    //          print("Error: did not receive data")
+    //          return
+    //        }
+    //        do {
+    //          guard let receivedTodo = try JSONSerialization.jsonObject(with: responseData,
+    //            options: []) as? [String: Any] else {
+    //                errorHanlder1()
+    //              print("Could not get JSON from responseData as dictionary")
+    //              return
+    //          }
+    //           successHanlder1(receivedTodo)
+    //        } catch  {
+    //            errorHanlder1()
+    //          print("error parsing response from POST on /todos")
+    //          return
+    //        }
+    //      }
+    //      task.resume()
+    //    }
 }
 public class DrdshSDKConfiguration : GGObject {
     public var appSid:String = ""
@@ -280,65 +257,20 @@ public class DrdshSDKConfiguration : GGObject {
     
     public override init() {
         let bundle = Bundle.module
-//        if let resourcePath = bundle.path(forResource: "DrdshSDK", ofType: "bundle") {
-//            if let resourcesBundle = Bundle(path: resourcePath) {
-//                bundle = resourcesBundle
-//            }
-//        }
         backImage = UIImage(named: "back", in: bundle, compatibleWith: nil)!
-                likeImage = UIImage(named: "like", in: bundle, compatibleWith: nil)!
-                disLikeImage = UIImage(named: "dislike", in: bundle, compatibleWith: nil)!
-                likeSelctedImage = UIImage(named: "selectedlike", in: bundle, compatibleWith: nil)!
-                disLikeSelctedImage = UIImage(named: "selecteddislike", in: bundle, compatibleWith: nil)!
-                mailImage = UIImage(named: "mail", in: bundle, compatibleWith: nil)!
-                attachmentImage = UIImage(named: "attchment", in: bundle, compatibleWith: nil)!
-                sendMessageImage = UIImage(named: "send", in: bundle, compatibleWith: nil)!
-                userPlaceHolderImage = UIImage(named: "user", in: bundle, compatibleWith: nil)!
-                attachmentPlaceHolderImage = UIImage(named: "products_placeholder", in: bundle, compatibleWith: nil)!
-                
-                readImage = UIImage(named: "read", in: bundle, compatibleWith: nil)!
-                sentImage = UIImage(named: "sent", in: bundle, compatibleWith: nil)!
-                deliveredImage = UIImage(named: "delivered", in: bundle, compatibleWith: nil)!
+        likeImage = UIImage(named: "like", in: bundle, compatibleWith: nil)!
+        disLikeImage = UIImage(named: "dislike", in: bundle, compatibleWith: nil)!
+        likeSelctedImage = UIImage(named: "selectedlike", in: bundle, compatibleWith: nil)!
+        disLikeSelctedImage = UIImage(named: "selecteddislike", in: bundle, compatibleWith: nil)!
+        mailImage = UIImage(named: "mail", in: bundle, compatibleWith: nil)!
+        attachmentImage = UIImage(named: "attchment", in: bundle, compatibleWith: nil)!
+        sendMessageImage = UIImage(named: "send", in: bundle, compatibleWith: nil)!
+        userPlaceHolderImage = UIImage(named: "user", in: bundle, compatibleWith: nil)!
+        attachmentPlaceHolderImage = UIImage(named: "products_placeholder", in: bundle, compatibleWith: nil)!
         
-//        if let temp = Bundle.module.path(forResource: "back", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            backImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "like", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            likeImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "dislike", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            disLikeImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "selectedlike", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            likeSelctedImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "selecteddislike", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            disLikeSelctedImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "mail", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            mailImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "attchment", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            attachmentImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "send", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            sendMessageImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "user", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            userPlaceHolderImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "products_placeholder", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            attachmentPlaceHolderImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "read", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            readImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "sent", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            sentImage = img
-//        }
-//        if let temp = Bundle.module.path(forResource: "delivered", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
-//            deliveredImage = img
-//        }
+        readImage = UIImage(named: "read", in: bundle, compatibleWith: nil)!
+        sentImage = UIImage(named: "sent", in: bundle, compatibleWith: nil)!
+        deliveredImage = UIImage(named: "delivered", in: bundle, compatibleWith: nil)!
         
     }
     func mapServerData(to:[String:Any]){
@@ -370,7 +302,7 @@ public class DrdshSDKConfiguration : GGObject {
 }
 
 public extension UIColor {
-
+    
     convenience init(hexCode:Int, alpha:CGFloat = 1.0) {
         self.init(
             red:   CGFloat((hexCode & 0xFF0000) >> 16) / 255.0,
@@ -396,7 +328,7 @@ public extension UIColor {
         let blue  = CGFloat(b) / 255.0
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
-
+    
 }
 extension String{
     func Color()->UIColor{

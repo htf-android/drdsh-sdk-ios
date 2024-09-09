@@ -56,26 +56,49 @@ It includes such requirements as:
 
 ## Installation
 
-### CocoaPods
+<!--### CocoaPods-->
+<!---->
+<!--[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:-->
+<!---->
+<!--```bash-->
+<!--$ gem install cocoapods-->
+<!--```-->
+<!---->
+<!--To integrate DrdshSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :-->
+<!---->
+<!--```target-->
+<!--pod 'DrdshSDK'-->
+<!--end-->
+<!--```-->
+<!---->
+<!--Then, run the following command:-->
+<!---->
+<!--```bash-->
+<!--$ pod install-->
+<!--```-->
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+#### Setup with Swift Package Manager
 
-```bash
-$ gem install cocoapods
-```
+You can use [The Swift Package Manager](https://swift.org/package-manager) to install `SwiftyJSON` by adding the proper description to your `Package.swift` file:
 
-To integrate DrdshSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :
+* In Xcode 11+ select *File > Packages > Add Package Dependency...*.
+* Enter this project's URL: https://github.com/htf-app/drdsh-sdk-ios.git
 
-```target
-pod 'DrdshSDK'
-end
-```
+<p align="center">
+<a href="https://www.drdsh.live/sdk/Add_Package_Dependency.png">
+<img src="https://www.drdsh.live/sdk/Add_Package_Dependency.png" height="500">
+</a>
 
-Then, run the following command:
+<p align="center">
+<a href="https://www.drdsh.live/sdk/Paste_here.png">
+<img src="https://www.drdsh.live/sdk/Paste_here.png" height="500">
+</a>
 
-```bash
-$ pod install
-```
+<p align="center">
+<a href="https://www.drdsh.live/sdk/URL_Example.png">
+<img src="https://www.drdsh.live/sdk/URL_Example.png" height="500">
+</a>
+
 
 ## Usage
 
