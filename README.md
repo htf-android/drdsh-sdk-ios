@@ -56,26 +56,26 @@ It includes such requirements as:
 
 ## Installation
 
-<!--### CocoaPods-->
-<!---->
-<!--[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:-->
-<!---->
-<!--```bash-->
-<!--$ gem install cocoapods-->
-<!--```-->
-<!---->
-<!--To integrate DrdshSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :-->
-<!---->
-<!--```target-->
-<!--pod 'DrdshSDK'-->
-<!--end-->
-<!--```-->
-<!---->
-<!--Then, run the following command:-->
-<!---->
-<!--```bash-->
-<!--$ pod install-->
-<!--```-->
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate DrdshSDK into your Xcode project using CocoaPods, specify it in your ``Podfile`` :
+
+```target
+pod 'DrdshSDK'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 #### Setup with Swift Package Manager
 
