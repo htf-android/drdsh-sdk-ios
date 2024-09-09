@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/htf-app/drdsh-sdk-ios",
       "state" : {
-        "revision" : "d7de86796ec23fe9fb16116faa19ac8039d747da",
-        "version" : "2.1.4"
+        "revision" : "2b52700f2c50ec83e012221c31a57f1206c0e2d7",
+        "version" : "2.1.6"
       }
     },
     {

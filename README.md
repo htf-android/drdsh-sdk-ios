@@ -77,7 +77,7 @@ Then, run the following command:
 $ pod install
 ```
 
-#### Setup with Swift Package Manager
+### Setup with Swift Package Manager
 
 You can use [The Swift Package Manager](https://swift.org/package-manager) to install `DrdshSDK` by adding the proper description to your `Package.swift` file:
 
