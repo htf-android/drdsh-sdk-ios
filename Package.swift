@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.0"),
-       // .package(url: "https://github.com/jdg/MBProgressHUD.git", from: "1.2.0"),
+        .package(url: "https://github.com/jdg/MBProgressHUD.git", from: "1.2.0"),
         .package(url: "https://github.com/hackiftekhar/IQKeyboardManager.git", from: "6.5.0"),
         .package(url: "https://github.com/socketio/socket.io-client-swift.git", from: "16.0.0")
     ],
@@ -26,7 +26,7 @@ let package = Package(
             name: "DrdshSDK",
             dependencies: [
                 "SwiftyJSON",
-            //    "MBProgressHUD",
+                "MBProgressHUD",
                 .product(name: "IQKeyboardManagerSwift",package: "IQKeyboardManager"),
                 .product(name: "SocketIO",package: "socket.io-client-swift")
             ],

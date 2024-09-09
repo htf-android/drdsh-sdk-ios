@@ -3,16 +3,25 @@
     {
       "identity" : "iqkeyboardmanager",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/hackiftekhar/IQKeyboardManager",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
       "state" : {
         "revision" : "c00b1ae9fa1ad8af4465bb6ca901f6943fc98eba",
         "version" : "6.5.16"
       }
     },
     {
+      "identity" : "mbprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jdg/MBProgressHUD.git",
+      "state" : {
+        "revision" : "bca42b801100b2b3a4eda0ba8dd33d858c780b0d",
+        "version" : "1.2.0"
+      }
+    },
+    {
       "identity" : "socket.io-client-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/socketio/socket.io-client-swift",
+      "location" : "https://github.com/socketio/socket.io-client-swift.git",
       "state" : {
         "revision" : "175da8b5156f6b132436f0676cc84c2f6a766b6e",
         "version" : "16.1.0"
@@ -30,7 +39,7 @@
     {
       "identity" : "swiftyjson",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SwiftyJSON/SwiftyJSON",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
       "state" : {
         "revision" : "af76cf3ef710b6ca5f8c05f3a31307d44a3c5828",
         "version" : "5.0.2"
