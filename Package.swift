@@ -32,14 +32,8 @@ let package = Package(
             ],
             path: "Sources",
             resources: [
-                .process("DrdshSDK/Resources") // Add resources folder here
+                .process("DrdshSDK/Resources")
             ]
-            // ,swiftSettings: [
-            //     .define("SOME_CONDITIONAL_FLAG")
-            // ],
-//             linkerSettings: [
-//                 .linkedFramework("UIKit")
-//             ]
         ),
         .testTarget(
             name: "DrdshSDKTests",
@@ -47,6 +41,4 @@ let package = Package(
         ),
     ],
     swiftLanguageVersions: [.v5]
-    // ,cLanguageStandard: .gnu11,
-    // cxxLanguageStandard: .gnucxx11
 )

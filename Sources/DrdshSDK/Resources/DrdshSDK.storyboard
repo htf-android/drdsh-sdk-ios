@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nON-Kh-6vS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--Main Load View Controller-->
         <scene sceneID="xhy-Mw-bwP">
             <objects>
-                <viewController storyboardIdentifier="MainLoadViewController" id="nON-Kh-6vS" customClass="MainLoadViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainLoadViewController" id="nON-Kh-6vS" customClass="MainLoadViewController" customModule="DrdshSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SIH-Gl-XUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +192,7 @@
         <!--Chat View Controller-->
         <scene sceneID="V7K-8m-Xo7">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="VNX-Ov-BDt" customClass="ChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="VNX-Ov-BDt" customClass="ChatViewController" customModule="DrdshSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ESZ-yh-fnJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -650,7 +651,7 @@
         <!--Rate View Controller-->
         <scene sceneID="uSK-VD-eHI">
             <objects>
-                <viewController storyboardIdentifier="RateViewController" id="4tF-U6-c03" customClass="RateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RateViewController" id="4tF-U6-c03" customClass="RateViewController" customModule="DrdshSDK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qd0-nB-ld6"/>
                         <viewControllerLayoutGuide type="bottom" id="Jug-k3-cK4"/>
@@ -831,7 +832,7 @@
         <!--Offline View Controller-->
         <scene sceneID="FZb-iX-jWh">
             <objects>
-                <viewController storyboardIdentifier="OfflineViewController" id="bfV-Dz-p9w" customClass="OfflineViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OfflineViewController" id="bfV-Dz-p9w" customClass="OfflineViewController" customModule="DrdshSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vup-vU-ZMq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
