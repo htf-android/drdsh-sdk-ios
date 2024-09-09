@@ -124,6 +124,10 @@ You can use [The Swift Package Manager](https://swift.org/package-manager) to in
     let sdkCongig = DrdshSDKConfiguration()
     sdkCongig.appSid = "put your appSid here"
     //"APPSID you will get it from https://www.drdsh.live/company/api-key."
+    
+    sdkCongig.FCM_Token = AppDelegate.shared.token
+    sdkCongig.FCM_Auth_Key = AppDelegate.shared.Auth_key
+    //Pass this both value if you need push notification for messages 
   
 ```
 
