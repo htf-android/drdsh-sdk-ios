@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DrdshSDK'
-  s.version          = '2.0.4'
+  s.version          = '2.0.7'
   s.summary          = 'To Build Excellent Customer Experience, Connect With DRDSH.'
 
 # This description is used to generate tags and improve search results.

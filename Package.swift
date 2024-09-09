@@ -32,7 +32,7 @@ let package = Package(
             ],
             path: "Sources",
             resources: [
-                .process("Resources") // Add resources folder here
+                .process("DrdshSDK/Resources") // Add resources folder here
             ]
             // ,swiftSettings: [
             //     .define("SOME_CONDITIONAL_FLAG")
