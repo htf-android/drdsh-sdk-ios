@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DrdshSDK'
-  s.version          = '2.1.5'
+  s.version          = '2.1.6'
   s.summary          = 'To Build Excellent Customer Experience, Connect With DRDSH.'
 
 # This description is used to generate tags and improve search results.
@@ -30,14 +30,14 @@ We have influential engagement products and potent customer service with flexibi
   s.swift_version = '5.0'
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Sources/DrdshSDK/**/*'
+  s.source_files = 'Sources/**/*'
   s.platform     = :ios, '12.0'
   s.dependency 'SwiftyJSON', '~> 4.0'
   s.dependency 'MBProgressHUD'
   s.dependency 'IQKeyboardManagerSwift', '6.2.1'
   s.dependency 'Socket.IO-Client-Swift','15.2.0'
    s.resource_bundles = {
-     'DrdshSDK' => ['Resources/**/*','Resources/PrivacyInfo.xcprivacy'],
+     'DrdshSDK' => ['Sources/Resources/**/*','Sources/Resources/PrivacyInfo.xcprivacy'],
    }
    s.requires_arc = true
   # s.xcconfig = {  'LIBRARY_SEARCH_PATHS' => '$(SDKROOT)/usr/lib/swift',}

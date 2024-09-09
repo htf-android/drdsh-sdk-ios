@@ -19,7 +19,11 @@ public class DrdshSDK : NSObject {
     var AgentDetail:AgentModel = AgentModel()
     var config = DrdshSDKConfiguration()
     func DrdshSDKBundlePath() -> String {
+#if SWIFT_PACKAGE
         return Bundle.module.bundlePath
+#else
+        return Bundle(for: DrdshSDK.self).path(forResource: "DrdshSDK", ofType: "bundle")!
+#endif
     }
     func DrdshSDKForcedBundlePath() -> String {
         let path = DrdshSDKBundlePath()
@@ -59,7 +63,10 @@ public class DrdshSDK : NSObject {
         //          })
         //        }
         else{
-            let bundle = Bundle.module
+            var bundle = Bundle(for: DrdshSDK.self)
+#if SWIFT_PACKAGE
+            bundle = Bundle.module
+#endif
             let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateViewController(withIdentifier: "MainLoadViewController") as! MainLoadViewController
             vc.modalPresentationStyle = .overFullScreen
             let nav = UINavigationController(rootViewController: vc)
@@ -256,7 +263,17 @@ public class DrdshSDKConfiguration : GGObject {
     public var watingMsg:String = "watingMsg"
     
     public override init() {
-        let bundle = Bundle.module
+        var bundle = Bundle.main
+#if SWIFT_PACKAGE
+        bundle = Bundle.module
+#else
+        bundle = Bundle(for: DrdshSDK.self)
+              if let resourcePath = bundle.path(forResource: "DrdshSDK", ofType: "bundle") {
+                  if let resourcesBundle = Bundle(path: resourcePath) {
+                      bundle = resourcesBundle
+                  }
+              }
+#endif
         backImage = UIImage(named: "back", in: bundle, compatibleWith: nil)!
         likeImage = UIImage(named: "like", in: bundle, compatibleWith: nil)!
         disLikeImage = UIImage(named: "dislike", in: bundle, compatibleWith: nil)!
