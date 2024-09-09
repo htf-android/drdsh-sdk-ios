@@ -79,7 +79,7 @@ It includes such requirements as:
 
 #### Setup with Swift Package Manager
 
-You can use [The Swift Package Manager](https://swift.org/package-manager) to install `SwiftyJSON` by adding the proper description to your `Package.swift` file:
+You can use [The Swift Package Manager](https://swift.org/package-manager) to install `DrdshSDK` by adding the proper description to your `Package.swift` file:
 
 * In Xcode 11+ select *File > Packages > Add Package Dependency...*.
 * Enter this project's URL: https://github.com/htf-app/drdsh-sdk-ios.git
