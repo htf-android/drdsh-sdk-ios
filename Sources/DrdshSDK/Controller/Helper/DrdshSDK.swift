@@ -261,27 +261,45 @@ public class DrdshSDKConfiguration : GGObject {
                 bundle = resourcesBundle
             }
         }
-        if let temp = Bundle.module.path(forResource: "back", ofType: "png"){
-            if let img = UIImage(contentsOfFile: temp) {
-                backImage = img
-            }
+        if let temp = Bundle.module.path(forResource: "back", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            backImage = img
         }
-        
-        backImage = UIImage(named: "back", in: bundle, compatibleWith: nil)!
-        likeImage = UIImage(named: "like", in: bundle, compatibleWith: nil)!
-        disLikeImage = UIImage(named: "dislike", in: bundle, compatibleWith: nil)!
-        likeSelctedImage = UIImage(named: "selectedlike", in: bundle, compatibleWith: nil)!
-        disLikeSelctedImage = UIImage(named: "selecteddislike", in: bundle, compatibleWith: nil)!
-        mailImage = UIImage(named: "mail", in: bundle, compatibleWith: nil)!
-        attachmentImage = UIImage(named: "attchment", in: bundle, compatibleWith: nil)!
-        sendMessageImage = UIImage(named: "send", in: bundle, compatibleWith: nil)!
-        userPlaceHolderImage = UIImage(named: "user", in: bundle, compatibleWith: nil)!
-        attachmentPlaceHolderImage = UIImage(named: "products_placeholder", in: bundle, compatibleWith: nil)!
-        
-        readImage = UIImage(named: "read", in: bundle, compatibleWith: nil)!
-        sentImage = UIImage(named: "sent", in: bundle, compatibleWith: nil)!
-        deliveredImage = UIImage(named: "delivered", in: bundle, compatibleWith: nil)!
-        
+        if let temp = Bundle.module.path(forResource: "like", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            likeImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "dislike", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            disLikeImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "selectedlike", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            likeSelctedImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "selecteddislike", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            disLikeSelctedImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "mail", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            mailImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "attchment", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            attachmentImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "send", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            sendMessageImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "user", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            userPlaceHolderImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "products_placeholder", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            attachmentPlaceHolderImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "read", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            readImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "sent", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            sentImage = img
+        }
+        if let temp = Bundle.module.path(forResource: "delivered", ofType: "png"),let img = UIImage(contentsOfFile: temp) {
+            deliveredImage = img
+        }
     }
     func mapServerData(to:[String:Any]){
         for (key,value) in to{
