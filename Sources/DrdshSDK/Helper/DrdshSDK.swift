@@ -61,26 +61,48 @@ public class DrdshSDK : NSObject {
         else{
             let bundle = Bundle.module
             print(bundle.bundlePath)
-            let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateViewController(withIdentifier: "MainLoadViewController") as! MainLoadViewController
-            vc.modalPresentationStyle = .overFullScreen
-            let nav = UINavigationController(rootViewController: vc)
-            nav.modalPresentationStyle = .overFullScreen
-            if #available(iOS 13.0, *) {
-                let appearance = UINavigationBarAppearance()
-                appearance.configureWithDefaultBackground()
-                appearance.backgroundColor = DrdshSDK.shared.config.topBarBgColor.Color()
-                appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : DrdshSDK.shared.config.titleTextColor.Color(),.font : UIFont.boldSystemFont(ofSize: 17)]
-                nav.navigationBar.standardAppearance = appearance;
-                nav.navigationBar.scrollEdgeAppearance = appearance;
-                nav.navigationBar.compactAppearance = appearance;
-             //   navigationBar.barStyle = UIBarStyle.black;
-                nav.navigationBar.tintColor = UIColor.black
-                nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
-               // navigationBar.barStyle = UIBarStyle.default;
+            if let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateInitialViewController() {
+                vc.modalPresentationStyle = .overFullScreen
+                let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .overFullScreen
+                if #available(iOS 13.0, *) {
+                    let appearance = UINavigationBarAppearance()
+                    appearance.configureWithDefaultBackground()
+                    appearance.backgroundColor = DrdshSDK.shared.config.topBarBgColor.Color()
+                    appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : DrdshSDK.shared.config.titleTextColor.Color(),.font : UIFont.boldSystemFont(ofSize: 17)]
+                    nav.navigationBar.standardAppearance = appearance;
+                    nav.navigationBar.scrollEdgeAppearance = appearance;
+                    nav.navigationBar.compactAppearance = appearance;
+                 //   navigationBar.barStyle = UIBarStyle.black;
+                    nav.navigationBar.tintColor = UIColor.black
+                    nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+                   // navigationBar.barStyle = UIBarStyle.default;
+                }
+                DrdshSDK.shared.topViewController()?.present(nav, animated: true, completion: {
+                    completion?(true)
+                })
+                // Present or push the view controller as needed
             }
-            DrdshSDK.shared.topViewController()?.present(nav, animated: true, completion: {
-                completion?(true)
-            })
+//            let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateViewController(withIdentifier: "MainLoadViewController") as! MainLoadViewController
+//            vc.modalPresentationStyle = .overFullScreen
+//            let nav = UINavigationController(rootViewController: vc)
+//            nav.modalPresentationStyle = .overFullScreen
+//            if #available(iOS 13.0, *) {
+//                let appearance = UINavigationBarAppearance()
+//                appearance.configureWithDefaultBackground()
+//                appearance.backgroundColor = DrdshSDK.shared.config.topBarBgColor.Color()
+//                appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : DrdshSDK.shared.config.titleTextColor.Color(),.font : UIFont.boldSystemFont(ofSize: 17)]
+//                nav.navigationBar.standardAppearance = appearance;
+//                nav.navigationBar.scrollEdgeAppearance = appearance;
+//                nav.navigationBar.compactAppearance = appearance;
+//             //   navigationBar.barStyle = UIBarStyle.black;
+//                nav.navigationBar.tintColor = UIColor.black
+//                nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+//               // navigationBar.barStyle = UIBarStyle.default;
+//            }
+//            DrdshSDK.shared.topViewController()?.present(nav, animated: true, completion: {
+//                completion?(true)
+//            })
         }
     }
     @objc public class func dismissChat(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
