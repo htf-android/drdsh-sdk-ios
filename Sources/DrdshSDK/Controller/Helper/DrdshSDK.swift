@@ -261,6 +261,12 @@ public class DrdshSDKConfiguration : GGObject {
                 bundle = resourcesBundle
             }
         }
+        if let temp = Bundle.module.path(forResource: "back", ofType: "png"){
+            if let img = UIImage(contentsOfFile: temp) {
+                backImage = img
+            }
+        }
+        
         backImage = UIImage(named: "back", in: bundle, compatibleWith: nil)!
         likeImage = UIImage(named: "like", in: bundle, compatibleWith: nil)!
         disLikeImage = UIImage(named: "dislike", in: bundle, compatibleWith: nil)!

@@ -33,8 +33,7 @@ let package = Package(
             path: "Sources",
             resources: [
                 .process("Resources") // Add resources folder here
-            ],
-            publicHeadersPath: "include"
+            ]
             // ,swiftSettings: [
             //     .define("SOME_CONDITIONAL_FLAG")
             // ],
