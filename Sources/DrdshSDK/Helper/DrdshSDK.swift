@@ -59,7 +59,9 @@ public class DrdshSDK : NSObject {
 //          })
 //        }
         else{
-            let vc = UIStoryboard(name: "DrdshSDK", bundle: Bundle.module).instantiateViewController(withIdentifier: "MainLoadViewController") as! MainLoadViewController
+            let bundle = Bundle.module
+            print(bundle.bundlePath)
+            let vc = UIStoryboard(name: "DrdshSDK", bundle: bundle).instantiateViewController(withIdentifier: "MainLoadViewController") as! MainLoadViewController
             vc.modalPresentationStyle = .overFullScreen
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .overFullScreen

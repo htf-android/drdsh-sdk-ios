@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,13 +11,13 @@
         <!--Main Load View Controller-->
         <scene sceneID="xhy-Mw-bwP">
             <objects>
-                <viewController storyboardIdentifier="MainLoadViewController" id="nON-Kh-6vS" customClass="MainLoadViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainLoadViewController" id="nON-Kh-6vS" customClass="MainLoadViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SIH-Gl-XUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zOY-tl-IKu">
-                                <rect key="frame" x="20" y="64" width="374" height="360"/>
+                                <rect key="frame" x="20" y="68" width="374" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGN-P7-iAK" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -192,13 +191,13 @@
         <!--Chat View Controller-->
         <scene sceneID="V7K-8m-Xo7">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="VNX-Ov-BDt" customClass="ChatViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="VNX-Ov-BDt" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ESZ-yh-fnJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PpW-5X-K0c">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-aT-3cO" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -272,11 +271,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c3r-MA-MUl">
-                                        <rect key="frame" x="0.0" y="70" width="414" height="648"/>
+                                        <rect key="frame" x="0.0" y="70" width="414" height="644"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AgentTableViewCell" rowHeight="93" id="eSt-2V-md9" customClass="AgentTableViewCell" customModule="DrdshChatSDK" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>
+                                                <rect key="frame" x="0.0" y="50" width="414" height="93"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSt-2V-md9" id="QhE-q1-M43">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
@@ -365,7 +364,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyTableViewCell" rowHeight="93" id="4oh-BT-GXP" customClass="MyTableViewCell" customModule="DrdshChatSDK" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="137.5" width="414" height="93"/>
+                                                <rect key="frame" x="0.0" y="143" width="414" height="93"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4oh-BT-GXP" id="wCP-rn-zdc">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
@@ -467,7 +466,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="systemTableViewCell" rowHeight="93" id="aBP-oD-TMf" customClass="systemTableViewCell" customModule="DrdshChatSDK" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="230.5" width="414" height="93"/>
+                                                <rect key="frame" x="0.0" y="236" width="414" height="93"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aBP-oD-TMf" id="u6K-yD-1CH">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
@@ -500,7 +499,7 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-ZP-ccD">
-                                        <rect key="frame" x="0.0" y="728" width="414" height="20"/>
+                                        <rect key="frame" x="0.0" y="724" width="414" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwv-QI-Vvp">
                                                 <rect key="frame" x="5" y="3" width="404" height="14"/>
@@ -519,7 +518,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKd-D9-mds" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="758" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="754" width="414" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-jt-dOd">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="0.5"/>
@@ -651,7 +650,7 @@
         <!--Rate View Controller-->
         <scene sceneID="uSK-VD-eHI">
             <objects>
-                <viewController storyboardIdentifier="RateViewController" id="4tF-U6-c03" customClass="RateViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RateViewController" id="4tF-U6-c03" customClass="RateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qd0-nB-ld6"/>
                         <viewControllerLayoutGuide type="bottom" id="Jug-k3-cK4"/>
@@ -832,13 +831,13 @@
         <!--Offline View Controller-->
         <scene sceneID="FZb-iX-jWh">
             <objects>
-                <viewController storyboardIdentifier="OfflineViewController" id="bfV-Dz-p9w" customClass="OfflineViewController" customModule="DrdshChatSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OfflineViewController" id="bfV-Dz-p9w" customClass="OfflineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vup-vU-ZMq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3k9-oe-W5u">
-                                <rect key="frame" x="20" y="64" width="374" height="425"/>
+                                <rect key="frame" x="20" y="68" width="374" height="425"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-vC-50U" customClass="GGView" customModule="DrdshChatSDK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
