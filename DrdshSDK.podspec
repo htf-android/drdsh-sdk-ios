@@ -27,22 +27,23 @@ We have influential engagement products and potent customer service with flexibi
   s.author           = { 'htf' => 'cto@htf.sa' }
   s.source           = { :git => 'https://github.com/htf-app/drdsh-sdk-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '13.0'
-
-  s.source_files = 'DrdshSDK/Classes/**/*'
   s.swift_version = '5.0'
-  s.platform     = :ios, '13.0'
+  s.ios.deployment_target = '12.0'
+
+  s.source_files = 'Sources/DrdshSDK/**/*'
+  s.platform     = :ios, '12.0'
   s.dependency 'SwiftyJSON', '~> 4.0'
   s.dependency 'MBProgressHUD'
   s.dependency 'IQKeyboardManagerSwift', '6.2.1'
   s.dependency 'Socket.IO-Client-Swift','15.2.0'
    s.resource_bundles = {
-     'DrdshSDK' => ['DrdshSDK/Assets/**/*']
+     'DrdshSDK' => ['Resources/**/*','Resources/PrivacyInfo.xcprivacy'],
    }
    s.requires_arc = true
- #  s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0'}
- #  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
-#  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64','IPHONEOS_DEPLOYMENT_TARGET' => '13.0' }
+  # s.xcconfig = {  'LIBRARY_SEARCH_PATHS' => '$(SDKROOT)/usr/lib/swift',}
+   s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '12.0'}
+ #  s.pod_target_xcconfig = {'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'IPHONEOS_DEPLOYMENT_TARGET' => '12.0' }
+#  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64','IPHONEOS_DEPLOYMENT_TARGET' => '12.0' }
 #      s.subspec "Crash" do |crash|
 #         crash.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 #         crash.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
@@ -53,5 +54,5 @@ We have influential engagement products and potent customer service with flexibi
 #      crash.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 #  end
   # s.public_header_files = 'Pod/Classes/**/*.h'
-   s.frameworks = 'UIKit'
+  s.ios.frameworks = ['UIKit', 'CoreGraphics', 'QuartzCore']
 end
